@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Umbanda em Conexão</title>
+    <script src="https://kit.fontawesome.com/d840916580.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="logo">
+        </div>
+        <div class="containerHeader">
+            <div class="navbar">
+                <a href="index.html">Página Inicial</a>
+                <a href="jornada.html">Jornada</a>
+                <a href="">Sobre mim</a>
+            </div>
+            <div class="user">
+                <a href="login.html"><i class="fa-regular fa-user"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="fundo">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="lado-esquerdo">
+
+                    <div class="conteudo-esquerdo">
+                        <h2>Conecte-se com sua <span>jornada</span></h2>
+                        <p>
+                            Aprenda, responda e evolua no caminho do conhecimento
+                            e da espiritualidade.
+                        </p>
+
+                        <div class="itens">
+                            <div class="item">
+                                <img src="imgs/aprenda.svg" alt="aprenda">
+                                <div class="texto-login">
+                                    <h3>Aprenda</h3>
+                                    <p>Explore conteúdos sobre a Umbanda.</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <img src="imgs/responda.svg" alt="">
+                                <div class="texto-login">
+                                    <h3>Responda</h3>
+                                    <p>Teste seus conhecimentos com quizzes.</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <img src="imgs/acompanhe.svg" alt="">
+                                <div class="texto-login">
+                                    <h3>Acompanhe</h3>
+                                    <p>Veja seu progresso e evolua sempre.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="frase">
+                            Cada passo de conhecimento é um passo de conexão.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lado-direito">
+
+                    <div class="opcao-cadastro-login">
+                        <button onclick="mostrarLogin()" id="btnLogin" class="ativo">Entrar</button>
+                        <button onclick="mostrarCadastro()" id="btnCadastro">Cadastrar</button>
+                    </div>
+
+                    <div class="conteudo">
+
+                        <div class="conteudoLogin" id="loginConteudo">
+
+                            <h2>Bem-vindo de volta!</h2>
+                            <p>Faça login para continuar sua jornada.</p>
+
+                            <div class="campo">
+                                <label>E-mail</label>
+                                <input type="email" placeholder="seuemail@exemplo.com">
+                            </div>
+
+                            <div class="campo">
+                                <label>Senha</label>
+                                <input type="password" placeholder="Digite sua senha">
+                            </div>
+
+                            <div class="opcoes">
+                                <label>
+                                    <input type="checkbox"> Lembrar de mim
+                                </label>
+                                <a href="#">Esqueceu sua senha?</a>
+                            </div>
+
+                            <button class="botaoEntrar">Entrar</button>
+                        </div>
+
+                        <div class="conteudoCadastro" id="cadastroConteudo" style="display: none;">
+                            <h2>Crie sua conta</h2>
+
+                            <div class="campo">
+                                <label>Nome</label>
+                                <input type="text" placeholder="Nome">
+                            </div>
+
+                            <div class="campo">
+                                <label>E-mail</label>
+                                <input type="email" placeholder="Email">
+                            </div>
+
+                            <div class="campo">
+                                <label>Senha</label>
+                                <input type="password" placeholder="Senha">
+                            </div>
+
+                            <button class="botaoEntrar">Cadastrar</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+function mostrarCadastro() {
+    document.getElementById("loginConteudo").style.display = "none";
+    document.getElementById("cadastroConteudo").style.display = "block";
+
+    document.getElementById("btnLogin").classList.remove("ativo");
+    document.getElementById("btnCadastro").classList.add("ativo");
+}
+
+function mostrarLogin() {
+    document.getElementById("loginConteudo").style.display = "block";
+    document.getElementById("cadastroConteudo").style.display = "none";
+
+    document.getElementById("btnCadastro").classList.remove("ativo");
+    document.getElementById("btnLogin").classList.add("ativo");
+}
+</script>
