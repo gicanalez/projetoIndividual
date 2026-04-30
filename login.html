@@ -105,7 +105,7 @@
                                 <a href="#">Esqueceu sua senha?</a>
                             </div>
 
-                            <button class="botaoEntrar">Entrar</button>
+                            <button onclick="entrar()" class="botaoEntrar">Entrar</button>
                         </div>
 
                         <div class="conteudoCadastro" id="cadastroConteudo" style="display: none;">
@@ -113,20 +113,23 @@
 
                             <div class="campo">
                                 <label>Nome</label>
-                                <input type="text" placeholder="Nome">
+                                <input type="text" placeholder="Nome" id="ipt_nome">
+                                <div id="msgNome" class="msgValidacao"></div>
                             </div>
 
                             <div class="campo">
                                 <label>E-mail</label>
-                                <input type="email" placeholder="Email">
+                                <input type="email" placeholder="Email" id="ipt_email">
+                                <div id="msgEmail" class="msgValidacao"></div>
                             </div>
 
                             <div class="campo">
                                 <label>Senha</label>
-                                <input type="password" placeholder="Senha">
+                                <input type="password" placeholder="Senha" id="ipt_senha">
+                                <div id="msgSenha" class="msgValidacao"></div>
                             </div>
 
-                            <button class="botaoEntrar">Cadastrar</button>
+                            <button onclick="cadastrar()" class="botaoEntrar">Cadastrar</button>
                         </div>
 
                     </div>
@@ -142,19 +145,51 @@
 
 </html>
 <script>
-function mostrarCadastro() {
-    document.getElementById("loginConteudo").style.display = "none";
-    document.getElementById("cadastroConteudo").style.display = "block";
+    function mostrarCadastro() {
+        document.getElementById("loginConteudo").style.display = "none";
+        document.getElementById("cadastroConteudo").style.display = "block";
 
-    document.getElementById("btnLogin").classList.remove("ativo");
-    document.getElementById("btnCadastro").classList.add("ativo");
-}
+        document.getElementById("btnLogin").classList.remove("ativo");
+        document.getElementById("btnCadastro").classList.add("ativo");
+    }
 
-function mostrarLogin() {
-    document.getElementById("loginConteudo").style.display = "block";
-    document.getElementById("cadastroConteudo").style.display = "none";
+    function mostrarLogin() {
+        document.getElementById("loginConteudo").style.display = "block";
+        document.getElementById("cadastroConteudo").style.display = "none";
 
-    document.getElementById("btnCadastro").classList.remove("ativo");
-    document.getElementById("btnLogin").classList.add("ativo");
-}
+        document.getElementById("btnCadastro").classList.remove("ativo");
+        document.getElementById("btnLogin").classList.add("ativo");
+    }
+
+    function cadastrar() {
+        let listaCaracter = ['!', '@', '#', '$', '%', '&', '*', '+', '.'];
+        let nome = ipt_nome.value;
+        let email = ipt_email.value;
+        let senha = ipt_senha.value;
+
+        let temEspecial = false
+
+        for (let i = 0; i < listaCaracter.length; i++) {
+            if (!(senha.includes(listaCaracter[i]))) {
+                msgSenha.innerHTML = `A senha deve incluir um caracter especial`
+                break
+            } else{
+                msgSenha.innerHTML = ""
+            }
+        }
+        if (!(email.includes('@', '.com'))) {
+            msgEmail.innerHTML = `O e-mail deve conter @ e '.com'`
+        } else{
+            msgEmail.innerHTML = ""
+        }
+
+        if(nome == ""){
+            msgNome.innerHTML = `Preecha esse campo`
+        }
+
+
+
+
+
+    }
 </script>
