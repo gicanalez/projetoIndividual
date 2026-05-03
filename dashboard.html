@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Caminho do Axé</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="logo">
+        </div>
+        <div class="containerHeader">
+            <div class="navbar">
+                <a href="index.html">Página Inicial</a>
+                <a href="jornada.html">Jornada</a>
+                <a href="">Sobre mim</a>
+            </div>
+            <div class="user">
+                <a href="login.html"><i class="fa-regular fa-user"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard">
+
+        <div class="container-kpi">
+
+            <div class="kpi">
+                <p>Quizzes feitos</p>
+                <span>12</span>
+            </div>
+
+            <div class="kpi">
+                <p>Média de acertos</p>
+                <span>75%</span>
+            </div>
+
+            <div class="kpi">
+                <p>Última tentativa</p>
+                <span>2 dias atrás</span>
+            </div>
+
+            <div class="kpi">
+                <p>Melhor resultado</p>
+                <span>9/10</span>
+            </div>
+        </div>
+
+        <div class="container-graficos">
+            <div class="grafico">
+                <canvas id="graficoEvolucao"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    const graficoEvolucao = document.getElementById('graficoEvolucao');
+
+    new Chart(graficoEvolucao), {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [
+                {
+                    label: 'Data',
+                    data: [],
+                    borderColor: 
+                }
+            ]
+        }
+    }
+</script>
