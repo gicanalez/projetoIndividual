@@ -63,17 +63,68 @@
 <script>
     const graficoEvolucao = document.getElementById('graficoEvolucao');
 
-    new Chart(graficoEvolucao), {
+    new Chart(graficoEvolucao, {
         type: 'line',
         data: {
             labels: [],
             datasets: [
                 {
-                    label: 'Data',
+                    label: 'Resultado:',
                     data: [],
-                    borderColor: 
+                    borderColor: '#146200',
+                    borderDash: [5, 5],
+                    borderWidth: 3
                 }
             ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    ticks: {
+                        font: {
+                            size: 13
+                        },
+                        color: "#146200"
+                    },
+                    title: {
+                        font: {
+                            size: 18
+                        },
+                        text: 'Data',
+                        display: true,
+                        color: "#fff"
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Resultado',
+                        color: '#146200'
+                    },
+                    beginAtZero: true,
+                    ticks: {
+                        font: {
+                            size: 14
+                        },
+                        color: "#146200"
+                    }
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Desempenho em Fundamentos',
+                    color: '#146200',
+                    font: {size: 16}
+                },
+                legend: {
+                    labels: {
+                        color: '#146200'
+                    }
+                }
+            }
         }
-    }
+    });
 </script>
