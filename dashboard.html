@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Caminho do Axé</title>
+    <link rel="stylesheet" href="dashboard.css">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -53,7 +54,15 @@
 
         <div class="container-graficos">
             <div class="grafico">
-                <canvas id="graficoEvolucao"></canvas>
+                <canvas id="graficoFundamento"></canvas>
+            </div>
+
+            <div class="grafico">
+                <canvas id="graficoOrixa"></canvas>
+            </div>
+
+            <div class="grafico">
+                <canvas id="graficoEntidade"></canvas>
             </div>
         </div>
     </div>
@@ -61,9 +70,9 @@
 
 </html>
 <script>
-    const graficoEvolucao = document.getElementById('graficoEvolucao');
+    const graficoFundamento = document.getElementById('graficoFundamento');
 
-    new Chart(graficoEvolucao, {
+    new Chart(graficoFundamento, {
         type: 'line',
         data: {
             labels: [],
@@ -117,7 +126,141 @@
                     display: true,
                     text: 'Desempenho em Fundamentos',
                     color: '#146200',
-                    font: {size: 16}
+                    font: { size: 16 }
+                },
+                legend: {
+                    labels: {
+                        color: '#146200'
+                    }
+                }
+            }
+        }
+    });
+
+    const graficoOrixa = document.getElementById('graficoOrixa');
+
+    new Chart(graficoOrixa, {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [
+                {
+                    label: 'Resultado:',
+                    data: [],
+                    borderColor: '#146200',
+                    borderDash: [5, 5],
+                    borderWidth: 3
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    ticks: {
+                        font: {
+                            size: 13
+                        },
+                        color: "#146200"
+                    },
+                    title: {
+                        font: {
+                            size: 18
+                        },
+                        text: 'Data',
+                        display: true,
+                        color: "#fff"
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Resultado',
+                        color: '#146200'
+                    },
+                    beginAtZero: true,
+                    ticks: {
+                        font: {
+                            size: 14
+                        },
+                        color: "#146200"
+                    }
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Desempenho em Fundamentos',
+                    color: '#146200',
+                    font: { size: 16 }
+                },
+                legend: {
+                    labels: {
+                        color: '#146200'
+                    }
+                }
+            }
+        }
+    });
+
+    const graficoEntidade = document.getElementById('graficoEntidade');
+
+    new Chart(graficoEntidade, {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [
+                {
+                    label: 'Resultado:',
+                    data: [],
+                    borderColor: '#146200',
+                    borderDash: [5, 5],
+                    borderWidth: 3
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    ticks: {
+                        font: {
+                            size: 13
+                        },
+                        color: "#146200"
+                    },
+                    title: {
+                        font: {
+                            size: 18
+                        },
+                        text: 'Data',
+                        display: true,
+                        color: "#fff"
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Resultado',
+                        color: '#146200'
+                    },
+                    beginAtZero: true,
+                    ticks: {
+                        font: {
+                            size: 14
+                        },
+                        color: "#146200"
+                    }
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Desempenho em Fundamentos',
+                    color: '#146200',
+                    font: { size: 16 }
                 },
                 legend: {
                     labels: {
