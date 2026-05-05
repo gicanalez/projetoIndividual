@@ -11,22 +11,17 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="logo">
-            <img src="imgs/logo.png" alt="logo">
-        </div>
-        <div class="containerHeader">
-            <div class="navbar">
-                <a href="index.html">Página Inicial</a>
-                <a href="jornada.html">Jornada</a>
-                <a href="">Sobre mim</a>
-            </div>
-            <div class="user">
-                <a href="login.html"><i class="fa-regular fa-user"></i></a>
-            </div>
-        </div>
-    </div>
 
+    <div class="menu">
+        <h2>Umbanda</h2>
+        <p>EM CONEXÃO</p>
+        <ul>
+            <li><strong><a href="dashboard.html">Dashboard</a></strong></li>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="jornada.html">Sua Jornada</a></li>
+            <li><a href="sobre.html">Sobre Mim</a></li>
+        </ul>
+    </div>
     <div class="dashboard">
 
         <div class="container-kpi">
@@ -54,16 +49,39 @@
 
         <div class="container-graficos">
             <div class="grafico">
-                <canvas id="graficoFundamento"></canvas>
+                <canvas class="fundamentos" id="graficoFundamento"></canvas>
             </div>
 
             <div class="grafico">
-                <canvas id="graficoOrixa"></canvas>
+                <canvas class="orixa" id="graficoOrixa"></canvas>
             </div>
 
             <div class="grafico">
-                <canvas id="graficoEntidade"></canvas>
+                <canvas class="entidade" id="graficoEntidade"></canvas>
             </div>
+        </div>
+
+        <div class="baixo">
+            <div class="continuar">
+                <h3>Continue sua jornada</h3>
+                <p>Fundamentos da Umbanda</p>
+                <button>Continuar quiz</button>
+            </div>
+
+            <div class="lista">
+                <h3>Quizzes disponíveis</h3>
+                <p>Fundamentos</p>
+                <p>Orixás</p>
+                <p>Entidades</p>
+            </div>
+
+            <div class="historico">
+                <h3>Histórico</h3>
+                <p>Orixás - 9/10</p>
+                <p>Fundamentos - 7/10</p>
+                <p>Entidades - 8/10</p>
+            </div>
+
         </div>
     </div>
 </body>
@@ -75,12 +93,13 @@
     new Chart(graficoFundamento, {
         type: 'line',
         data: {
-            labels: [],
+            labels: ['20/04', '27/04', '04/05', '11/05', '18/05'],
             datasets: [
                 {
                     label: 'Resultado:',
-                    data: [],
-                    borderColor: '#146200',
+                    data: [230, 830, 350, 610, 1290, 670],
+                    borderColor: '#7cff5b',
+                    backgroundColor: 'rgba(124, 255, 91, 0.2)',
                     borderDash: [5, 5],
                     borderWidth: 3
                 }
@@ -95,7 +114,7 @@
                         font: {
                             size: 13
                         },
-                        color: "#146200"
+                        color: "#ffffff"
                     },
                     title: {
                         font: {
@@ -110,14 +129,14 @@
                     title: {
                         display: true,
                         text: 'Resultado',
-                        color: '#146200'
+                        color: '#ffffff'
                     },
                     beginAtZero: true,
                     ticks: {
                         font: {
                             size: 14
                         },
-                        color: "#146200"
+                        color: "#ffffff"
                     }
                 }
             },
@@ -125,12 +144,12 @@
                 title: {
                     display: true,
                     text: 'Desempenho em Fundamentos',
-                    color: '#146200',
+                    color: '#ffffff',
                     font: { size: 16 }
                 },
                 legend: {
                     labels: {
-                        color: '#146200'
+                        color: '#ffffff'
                     }
                 }
             }
@@ -142,12 +161,13 @@
     new Chart(graficoOrixa, {
         type: 'line',
         data: {
-            labels: [],
+            labels: ['20/04', '27/04', '04/05', '11/05', '18/05'],
             datasets: [
                 {
                     label: 'Resultado:',
-                    data: [],
-                    borderColor: '#146200',
+                    data: [230, 830, 350, 610, 1290, 670],
+                    borderColor: '#4cc9f0',
+                    backgroundColor: 'rgba(76, 201, 240, 0.2)',
                     borderDash: [5, 5],
                     borderWidth: 3
                 }
@@ -162,7 +182,7 @@
                         font: {
                             size: 13
                         },
-                        color: "#146200"
+                        color: "#ffffff"
                     },
                     title: {
                         font: {
@@ -177,27 +197,27 @@
                     title: {
                         display: true,
                         text: 'Resultado',
-                        color: '#146200'
+                        color: '#ffffff'
                     },
                     beginAtZero: true,
                     ticks: {
                         font: {
                             size: 14
                         },
-                        color: "#146200"
+                        color: "#ffffff"
                     }
                 }
             },
             plugins: {
                 title: {
                     display: true,
-                    text: 'Desempenho em Fundamentos',
-                    color: '#146200',
+                    text: 'Desempenho em Orixás',
+                    color: '#ffffff',
                     font: { size: 16 }
                 },
                 legend: {
                     labels: {
-                        color: '#146200'
+                        color: '#ffffff'
                     }
                 }
             }
@@ -209,12 +229,13 @@
     new Chart(graficoEntidade, {
         type: 'line',
         data: {
-            labels: [],
+            labels: ['20/04', '27/04', '04/05', '11/05', '18/05'],
             datasets: [
                 {
                     label: 'Resultado:',
-                    data: [],
-                    borderColor: '#146200',
+                    data: [230, 830, 350, 610, 1290, 670],
+                    borderColor: '#c77dff',
+                    backgroundColor: 'rgba(199, 125, 255, 0.2)',
                     borderDash: [5, 5],
                     borderWidth: 3
                 }
@@ -229,7 +250,7 @@
                         font: {
                             size: 13
                         },
-                        color: "#146200"
+                        color: "#ffffff"
                     },
                     title: {
                         font: {
@@ -244,27 +265,27 @@
                     title: {
                         display: true,
                         text: 'Resultado',
-                        color: '#146200'
+                        color: '#ffffff'
                     },
                     beginAtZero: true,
                     ticks: {
                         font: {
                             size: 14
                         },
-                        color: "#146200"
+                        color: "#ffffff"
                     }
                 }
             },
             plugins: {
                 title: {
                     display: true,
-                    text: 'Desempenho em Fundamentos',
-                    color: '#146200',
+                    text: 'Desempenho em Entidades',
+                    color: '#ffffff',
                     font: { size: 16 }
                 },
                 legend: {
                     labels: {
-                        color: '#146200'
+                        color: '#ffffff'
                     }
                 }
             }
