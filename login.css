@@ -6,7 +6,7 @@ body {
 
 .header {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #0d2401;
+    background-color: #091125;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,7 +68,7 @@ body {
     border-radius: 20px;
     background: rgba(2, 13, 0, 0.7);
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(124, 255, 91, 0.2);
+    border: 1px solid #091125;
     height: 580px;
 
 }
@@ -83,7 +83,7 @@ body {
 }
 
 .lado-esquerdo span {
-    color: #146200;
+    color: #163584;
 }
 
 .texto-login{
@@ -91,7 +91,7 @@ body {
 }
 
 .texto-login h3 {
-    color: #146200;
+    color: #163584;
 }
 
 .itens {
@@ -131,7 +131,7 @@ body {
 }
 
 .opcao-cadastro-login .ativo {
-    background-color:  #2f7a03;
+    background-color:  #163584;
     border-radius: 30px;
 }
 
@@ -171,7 +171,7 @@ body {
 }
 
 .opcoes a:hover{
-    color: #2f7a03;
+    color: #163584;
 }
 
 .botaoEntrar {
@@ -180,7 +180,7 @@ body {
     border: none;
     border-radius: 30px;
 
-    background-color: #2f7a03;
+    background-color: #163584;
     color: white;
     font-weight: bold;
 
@@ -198,5 +198,5 @@ body {
 }
 
 .cadastro a {
-    color: #7cff5b;
+    color: #163584;
 }
