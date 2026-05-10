@@ -83,6 +83,11 @@ body {
     color: white;
 }
 
+.img {
+    width: 0px !important;
+    height: 0px !important; 
+}
+
 .container-graficos {
     display: flex;
     flex-direction: column;
@@ -136,4 +141,10 @@ button {
     background: #163584;
     color: white;
     cursor: pointer;
+    text-decoration: none;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
 }
