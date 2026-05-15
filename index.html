@@ -48,7 +48,8 @@
         </div>
         <div class="boxes">
             <div class="box-1">
-                <div class="img"><img src="../projetoIndividual/web-data-viz/public/assets/aprenda.svg" alt="aprenda"></div>
+                <div class="img"><img src="../projetoIndividual/web-data-viz/public/assets/aprenda.svg" alt="aprenda">
+                </div>
 
                 <div class="conteudo-texto">
                     <h3 class="tituloBox">Aprenda</h3>
@@ -57,7 +58,8 @@
             </div>
 
             <div class="box-2">
-                <div class="img"><img src="../projetoIndividual/web-data-viz/public/assets/responda.svg" alt="responda"></div>
+                <div class="img"><img src="../projetoIndividual/web-data-viz/public/assets/responda.svg" alt="responda">
+                </div>
 
                 <div class="conteudo-texto">
                     <h3 class="tituloBox">Responda</h3>
@@ -67,7 +69,8 @@
             </div>
 
             <div class="box-3">
-                <div class="img"><img src="../projetoIndividual/web-data-viz/public/assets/acompanhe.svg" alt="acompanhe"></div>
+                <div class="img"><img src="../projetoIndividual/web-data-viz/public/assets/acompanhe.svg"
+                        alt="acompanhe"></div>
 
                 <div class="conteudo-texto">
                     <h3 class="tituloBox">Acompanhe</h3>
@@ -81,7 +84,8 @@
             <h1 class="tituloConteudo">Explore os temas</h1>
             <div class="boxes">
                 <div class="box-4">
-                    <div class="img"><img src="../projetoIndividual/web-data-viz/public/assets/fundamento.svg" alt="fundamentos"></div>
+                    <div class="img"><img src="../projetoIndividual/web-data-viz/public/assets/fundamento.svg"
+                            alt="fundamentos"></div>
 
                     <div class="conteudo-texto">
                         <h3 class="tituloBox">Fundamentos</h3>
@@ -92,7 +96,8 @@
                 </div>
 
                 <div class="box-5">
-                    <div class="img"><img src="../projetoIndividual/web-data-viz/public/assets/orixa.svg" alt="orixas"></div>
+                    <div class="img"><img src="../projetoIndividual/web-data-viz/public/assets/orixa.svg" alt="orixas">
+                    </div>
 
                     <div class="conteudo-texto">
                         <h3 class="tituloBox">Orixás</h3>
@@ -103,7 +108,8 @@
                 </div>
 
                 <div class="box-6">
-                    <div class="img"><img src="../projetoIndividual/web-data-viz/public/assets/entidade.svg" alt="entidades"></div>
+                    <div class="img"><img src="../projetoIndividual/web-data-viz/public/assets/entidade.svg"
+                            alt="entidades"></div>
 
                     <div class="conteudo-texto">
                         <h3 class="tituloBox">Entidades</h3>
@@ -116,6 +122,37 @@
         </div>
     </div>
 
+    <div class="sobreMim">
+        <h1>Sobre Mim</h1>
+        <div class="conteudo-sobreMim">
+            <div class="carrossel">
+                <button onclick="voltar()"><</button>
+
+                        <img id="imagem" src="" alt="">
+
+                        <button onclick="avancar()">></button>
+            </div>
+            <p>Minha trajetória na Umbanda começou em um momento em que eu buscava mais do que apenas respostas: eu
+                buscava acolhimento, conexão e propósito, desde criança, sempre senti vontde de ir a um terreiro. Aos poucos, fui entendendo que a Umbanda não é apenas uma
+                religião, mas um caminho de aprendizado, evolução e fé. Foi dentro dela que encontrei ensinamentos que
+                transformaram minha forma de enxergar a vida, as pessoas e principalmente a mim mesma.
+
+                Cada experiência vivida dentro da religião marcou minha caminhada de alguma forma, fortalecendo minha
+                espiritualidade e meu coração. A Umbanda me ensinou sobre respeito, caridade, equilíbrio e sobre a
+                importância de evoluir constantemente, sempre guiada pela luz e pelos ensinamentos dos Orixás e
+                entidades.
+
+                Meu batismo aconteceu em 08 de junho de 2024, uma data muito especial e que representa um marco importante na
+                minha vida e na minha conexão espiritual.
+
+                Escolhi criar este projeto porque queria unir algo que amo com a tecnologia, trazendo um espaço onde
+                outras pessoas também possam aprender, conhecer e se conectar com a Umbanda de uma maneira leve,
+                acolhedora e verdadeira. Mais do que um site, esse projeto representa uma parte da minha história, da
+                minha fé e da minha jornada.
+            </p>
+        </div>
+    </div>
+
     <div class="footer">
         <div class="textoFooter">Cada passo é parte do seu caminho</div>
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -124,3 +161,35 @@
 </body>
 
 </html>
+<script>
+    let listaImagens = [
+        "../projetoIndividual/web-data-viz/public/assets/imgs/img1.jpeg",
+        "../projetoIndividual/web-data-viz/public/assets/imgs/img2.jpeg",
+        "../projetoIndividual/web-data-viz/public/assets/imgs/img3.jpeg"
+
+    ];
+
+    let indiceAtual = 0;
+
+    function avancar() {
+
+        indiceAtual++;
+
+        if(indiceAtual >= listaImagens.length){
+            indiceAtual = 0;
+        }
+
+        imagem.src = listaImagens[indiceAtual];
+    }
+
+    function voltar() {
+
+        indiceAtual--;
+
+        if(indiceAtual < 0){
+            indiceAtual = listaImagens.length - 1;
+        }
+
+        imagem.src = listaImagens[indiceAtual];
+    }
+</script>
