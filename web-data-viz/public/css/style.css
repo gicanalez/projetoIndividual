@@ -92,7 +92,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff;
-    margin-top: 0px;
+    margin-top: 55px;
     margin-bottom: 10px;
 }
 
@@ -118,7 +118,7 @@ body {
 .boxes {
     display: flex;
     justify-content: center;
-    
+
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -196,20 +196,47 @@ body {
 }
 
 .sobreMim h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    margin-top: 0px;
-    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
 }
 
-.conteudo-sobreMim p {
-    width: 400px;
+.sobreMim {
+    width: 90%;
+    margin: 40px auto;
+    margin-top: 55px;
+}
+
+.conteudo-sobreMim {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.texto-lado {
+    width: 450px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 40px;
+}
+
+.texto-baixo {
+    width: 89%;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.texto-lado p,
+.texto-baixo p {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    line-height: 1.8;
     font-size: 17px;
+    margin: 0;
 }
 
 .carrossel {
@@ -223,19 +250,7 @@ body {
     height: 250px;
 
     border-radius: 20px;
-
     object-fit: cover;
-}
-
-.sobreMim{
-        display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 50px;
-
-    width: 90%;
-    margin: 60px auto;
 }
 
 .carrossel button {
@@ -245,13 +260,12 @@ body {
     border: none;
     border-radius: 50%;
 
-    background: #0d2401;
+    background: #0b1e50;
     color: white;
 
     font-size: 20px;
     cursor: pointer;
 }
-
 
 .footer {
     color: #fff;

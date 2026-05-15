@@ -128,29 +128,40 @@
             <div class="carrossel">
                 <button onclick="voltar()"><</button>
 
-                        <img id="imagem" src="" alt="">
+                <img id="imagem" src="../projetoIndividual/web-data-viz/public/assets/imgs/img3.jpeg" alt="">
 
-                        <button onclick="avancar()">></button>
+                <button onclick="avancar()">></button>
             </div>
-            <p>Minha trajetória na Umbanda começou em um momento em que eu buscava mais do que apenas respostas: eu
-                buscava acolhimento, conexão e propósito, desde criança, sempre senti vontde de ir a um terreiro. Aos poucos, fui entendendo que a Umbanda não é apenas uma
-                religião, mas um caminho de aprendizado, evolução e fé. Foi dentro dela que encontrei ensinamentos que
-                transformaram minha forma de enxergar a vida, as pessoas e principalmente a mim mesma.
 
-                Cada experiência vivida dentro da religião marcou minha caminhada de alguma forma, fortalecendo minha
-                espiritualidade e meu coração. A Umbanda me ensinou sobre respeito, caridade, equilíbrio e sobre a
-                importância de evoluir constantemente, sempre guiada pela luz e pelos ensinamentos dos Orixás e
-                entidades.
-
-                Meu batismo aconteceu em 08 de junho de 2024, uma data muito especial e que representa um marco importante na
-                minha vida e na minha conexão espiritual.
-
-                Escolhi criar este projeto porque queria unir algo que amo com a tecnologia, trazendo um espaço onde
-                outras pessoas também possam aprender, conhecer e se conectar com a Umbanda de uma maneira leve,
-                acolhedora e verdadeira. Mais do que um site, esse projeto representa uma parte da minha história, da
-                minha fé e da minha jornada.
-            </p>
+            <div class="texto-lado">
+                <p>Minha trajetória na Umbanda começou em um momento em que eu buscava mais do que apenas respostas: eu
+                    buscava acolhimento, conexão e propósito, desde criança, sempre senti vontde de ir a um terreiro.
+                    Aos poucos, fui entendendo que a Umbanda não é apenas uma
+                    religião, mas um caminho de aprendizado, evolução e fé. Foi dentro dela que encontrei ensinamentos
+                    que
+                    transformaram minha forma de enxergar a vida, as pessoas e principalmente a mim mesma.
+                </p>
+            </div>
         </div>
+        <div class="texto-baixo">
+                <p>
+                    Cada experiência vivida dentro da religião marcou minha caminhada de alguma forma, fortalecendo
+                    minha
+                    espiritualidade e meu coração. A Umbanda me ensinou sobre respeito, caridade, equilíbrio e sobre a
+                    importância de evoluir constantemente, sempre guiada pela luz e pelos ensinamentos dos Orixás e
+                    entidades.
+
+                    Meu batismo aconteceu em 08 de junho de 2024, uma data muito especial e que representa um marco
+                    importante na
+                    minha vida e na minha conexão espiritual.
+
+                    Escolhi criar este projeto porque queria unir algo que amo com a tecnologia, trazendo um espaço onde
+                    outras pessoas também possam aprender, conhecer e se conectar com a Umbanda de uma maneira leve,
+                    acolhedora e verdadeira. Mais do que um site, esse projeto representa uma parte da minha história,
+                    da
+                    minha fé e da minha jornada.
+                </p>
+            </div>
     </div>
 
     <div class="footer">
@@ -175,7 +186,7 @@
 
         indiceAtual++;
 
-        if(indiceAtual >= listaImagens.length){
+        if (indiceAtual >= listaImagens.length) {
             indiceAtual = 0;
         }
 
@@ -186,7 +197,7 @@
 
         indiceAtual--;
 
-        if(indiceAtual < 0){
+        if (indiceAtual < 0) {
             indiceAtual = listaImagens.length - 1;
         }
 
