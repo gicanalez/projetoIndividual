@@ -8,13 +8,13 @@
     <script src="https://kit.fontawesome.com/d840916580.js" crossorigin="anonymous"></script>
 
 
-    <link rel="stylesheet" href="web-data-viz/public/css/login.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 
 <body>
     <div class="header">
         <div class="logo">
-            <img src="../projetoIndividual/web-data-viz/public/assets/logo.png" alt="logo">
+            <img src="./assets/logo.png" alt="logo">
         </div>
         <div class="containerHeader">
             <div class="navbar">
@@ -43,7 +43,7 @@
 
                         <div class="itens">
                             <div class="item">
-                                <img src="../projetoIndividual/web-data-viz/public/assets/aprenda.svg" alt="aprenda">
+                                <img src="./assets/aprenda.svg" alt="aprenda">
                                 <div class="texto-login">
                                     <h3>Aprenda</h3>
                                     <p>Explore conteúdos sobre a Umbanda.</p>
@@ -51,7 +51,7 @@
                             </div>
 
                             <div class="item">
-                                <img src="..//projetoIndividual/web-data-viz/public/assets/responda.svg" alt="">
+                                <img src="./assets/responda.svg" alt="">
                                 <div class="texto-login">
                                     <h3>Responda</h3>
                                     <p>Teste seus conhecimentos com quizzes.</p>
@@ -59,7 +59,7 @@
                             </div>
 
                             <div class="item">
-                                <img src="../projetoIndividual/web-data-viz/public/assets/acompanhe.svg" alt="">
+                                <img src="./assets/acompanhe.svg" alt="">
                                 <div class="texto-login">
                                     <h3>Acompanhe</h3>
                                     <p>Veja seu progresso e evolua sempre.</p>
@@ -90,12 +90,12 @@
 
                             <div class="campo">
                                 <label>E-mail</label>
-                                <input type="email" placeholder="seuemail@exemplo.com">
+                                <input type="email" id="ipt_email_login" placeholder="seuemail@exemplo.com">
                             </div>
 
                             <div class="campo">
                                 <label>Senha</label>
-                                <input type="password" placeholder="Digite sua senha">
+                                <input type="password" id="ipt_senha_login" placeholder="Digite sua senha">
                             </div>
 
                             <div class="opcoes">
@@ -167,29 +167,130 @@
         let email = ipt_email.value;
         let senha = ipt_senha.value;
 
-        let temEspecial = false
+        let validacaoOk = true;
 
+        let temEspecial = false;
         for (let i = 0; i < listaCaracter.length; i++) {
-            if (!(senha.includes(listaCaracter[i]))) {
-                msgSenha.innerHTML = `A senha deve incluir um caracter especial`
-                break
-            } else{
-                msgSenha.innerHTML = ""
+            if (senha.includes(listaCaracter[i])) {
+                temEspecial = true;
+                break;
             }
         }
-        if (!(email.includes('@', '.com'))) {
-            msgEmail.innerHTML = `O e-mail deve conter @ e '.com'`
-        } else{
-            msgEmail.innerHTML = ""
+
+        if (!temEspecial) {
+            msgSenha.innerHTML = `A senha deve incluir um caractere especial (!, @, #, etc.)`;
+            validacaoOk = false;
+        } else {
+            msgSenha.innerHTML = "";
         }
 
-        if(nome == ""){
-            msgNome.innerHTML = `Preecha esse campo`
+        if (!email.includes('@') || !email.includes('.com')) {
+            msgEmail.innerHTML = `O e-mail deve conter @ e '.com'`;
+            validacaoOk = false;
+        } else {
+            msgEmail.innerHTML = "";
         }
 
+        if (nome == "") {
+            msgNome.innerHTML = `Preencha esse campo`;
+            validacaoOk = false;
+        } else {
+            msgNome.innerHTML = "";
+        }
 
+        if (!validacaoOk) {
+            return false;
+        }
 
+        console.log("Enviando dados para a API...");
 
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // Passando os dados que o seu HTML capturou para as caixinhas que o servidor da faculdade espera
+                nomeServer: nome,
+                emailServer: email,
+                senhaServer: senha,
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
 
+                if (resposta.ok) {
+                    alert("Cadastro realizado com sucesso! Redirecionando para o login...");
+
+                    // Força a tela a mostrar a aba de Login automaticamente após cadastrar
+                    mostrarLogin();
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (erro) {
+                console.log(`#ERRO: ${erro}`);
+            });
+
+        return false;
+    }
+
+    function entrar() {
+        var emailVar = ipt_email_login.value;
+        var senhaVar = ipt_senha_login.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            alert("Por favor, preencha todos os campos para fazer login.");
+            return false;
+        }
+
+        console.log("Verificando credenciais com a API...");
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        })
+            .then(function (resposta) {
+                console.log("ESTOU NO THEN DO entrar()!");
+
+                if (resposta.ok) {
+                    console.log(resposta);
+
+                    resposta.json().then(json => {
+                        console.log(JSON.stringify(json));
+
+                        sessionStorage.EMAIL_USUARIO = json.email;
+                        sessionStorage.NOME_USUARIO = json.nome;
+                        sessionStorage.ID_USUARIO = json.id;
+
+                        alert("Login realizado com sucesso! Redirecionando para a sua jornada...");
+
+                        setTimeout(function () {
+                            window.location = "dashboard.html";
+                        }, 1000);
+
+                    });
+
+                } else {
+                    console.log("Houve um erro ao tentar realizar o login!");
+
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                        alert("E-mail ou senha inválidos. Tente novamente.");
+                    });
+                }
+
+            })
+            .catch(function (erro) {
+                console.log(erro);
+            })
+
+        return false;
     }
 </script>
