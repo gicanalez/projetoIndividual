@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jornada | Caminho do Axé</title>
-    <link rel="stylesheet" href="css/index-style.css">
+    <link rel="stylesheet" href="./css/jornada.css">
     <script src="https://kit.fontawesome.com/d840916580.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
     <div class="header">
-        <div class="logo"></div>
+        <div class="logo">
+            <img src="./assets/logo.png" alt="logo">
+        </div>
         <div containerHeader>
             <div class="navbar">
                 <a href="">Página Inicial</a>
@@ -513,53 +515,54 @@
                     </p>
                 </div>
 
+
+
+                <div class="slide ativo">
+                    <img src="imgs/eres.jpg">
+                    <h2>Ciganos</h2>
+                    <p>
+                        Linha ligada à liberdade, prosperidade, magia e alegria de viver.
+                    </p>
+                </div>
+
+                <div class="slide">
+                    <img src="imgs/caboclos.jpg">
+                    <h2>Marinheiros</h2>
+                    <p>
+                        Trazem equilíbrio emocional, descarrego e força diante das tempestades da vida.
+                    </p>
+                </div>
+
+                <div class="slide">
+                    <img src="imgs/pretosvelhos.jpg">
+                    <h2>Baianos</h2>
+                    <p>
+                        Representam simplicidade, acolhimento e muita força espiritual.
+                    </p>
+                </div>
+
+                <div class="slide">
+                    <img src="imgs/boiadeiros.jpg">
+                    <h2>Exus</h2>
+                    <p>
+                        Guardiões dos caminhos, atuam na proteção e na quebra de energias negativas.
+                    </p>
+                </div>
+
+                <div class="slide">
+                    <img src="imgs/malandros.jpg">
+                    <h2>Pombagiras</h2>
+                    <p>
+                        Linha ligada à força feminina, proteção, autoestima e liberdade espiritual.
+                    </p>
+                </div>
             </div>
 
-            <div class="slide ativo">
-                <img src="imgs/eres.jpg">
-                <h2>Ciganos</h2>
-                <p>
-                    Linha ligada à liberdade, prosperidade, magia e alegria de viver.
-                </p>
-            </div>
-
-            <div class="slide">
-                <img src="imgs/caboclos.jpg">
-                <h2>Marinheiros</h2>
-                <p>
-                    Trazem equilíbrio emocional, descarrego e força diante das tempestades da vida.
-                </p>
-            </div>
-
-            <div class="slide">
-                <img src="imgs/pretosvelhos.jpg">
-                <h2>Baianos</h2>
-                <p>
-                    Representam simplicidade, acolhimento e muita força espiritual.
-                </p>
-            </div>
-
-            <div class="slide">
-                <img src="imgs/boiadeiros.jpg">
-                <h2>Exus</h2>
-                <p>
-                    Guardiões dos caminhos, atuam na proteção e na quebra de energias negativas.
-                </p>
-            </div>
-
-            <div class="slide">
-                <img src="imgs/malandros.jpg">
-                <h2>Pombagiras</h2>
-                <p>
-                    Linha ligada à força feminina, proteção, autoestima e liberdade espiritual.
-                </p>
-            </div>
-
-
-            <div class="slide">
+            <div class="slide" onload="onloadEsconder()">
+                <div id="jogo"></div>
                 <img src="imgs/malandros.jpg">
                 <h2>Quiz Entidades</h2>
-                <button onclick="iniciarQuizEntidades()">Iniciar</button>
+                <button id="btIniciarQuiz" onclick="iniciarQuizEntidades()">Iniciar</button>
             </div>
 
         </div>

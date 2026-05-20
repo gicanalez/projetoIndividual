@@ -1,0 +1,295 @@
+body {
+    margin: 0;
+    padding: 0;
+   background-color: #091125;
+}
+
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #091125;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+}
+
+.logo img {
+    width: 110px;
+    height: 50px;
+}
+
+.containerHeader {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    position: absolute;
+    right: 10%;
+    display: flex;
+    gap: 40px;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.user a {
+    color: white;
+    font-size: 19px;
+}
+
+
+.bannerJornada {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 85vh;
+
+    background-image: url('../assets/bannerJornada.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tituloBannerJornada {
+    margin-left: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.bannerJornada p {
+    margin-left: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 16px;
+}
+
+.botaoBanner {
+    z-index: 2;
+    margin-top: 40px;
+    margin-left: 10%;
+}
+
+.botaoBanner button {
+    width: 200px;
+    height: 37px;
+    border-radius: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    background-color: #092364;
+    color: #fff;
+}
+
+
+/*FUNDAMENTOS*/
+.fundamento {
+    width: 85%;
+    margin: 80px auto;
+
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tituloTopico {
+    font-size: 42px;
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.titulos {
+    margin-top: 40px;
+    font-size: 26px;
+
+    color: #d7b56d;
+}
+
+.fundamento p {
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #e8e8e8;
+}
+
+.container-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+
+    max-width: 900px;
+    margin: auto;
+}
+
+/*CONTAINER CARDS*/
+.orixas {
+    margin-top: 100px;
+}
+
+.orixas p {
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #e8e8e8;
+
+    margin-bottom: 50px;
+}
+
+/*CARD FLIP*/
+.card-orixa {
+    width: 400px;
+    height: 500px;
+
+    perspective: 1000px;
+}
+
+/*ANIMACAO INTERNA*/
+.card-inner {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.8s;
+
+    transform-style: preserve-3d;
+}
+
+/*VIRAR O CARD*/
+.card-orixa:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/*FRENTE E VERSO*/
+.card-front,
+.card-back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    backface-visibility: hidden;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+/*FRENTE*/
+.card-front {
+    background: #101c38;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+}
+
+.card-front img {
+    width: 100%;
+    height: 80%;
+
+    object-fit: cover;
+}
+
+.card-front h2 {
+    margin-top: 15px;
+}
+
+/*VERSO*/
+.card-back {
+    background: #13254f;
+
+    color: white;
+
+    transform: rotateY(180deg);
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+}
+
+.card-back h2 {
+    margin-bottom: 15px;
+}
+
+.card-back p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.informacoes {
+    margin-top: 20px;
+
+    color: #d7b56d;
+
+    line-height: 1.8;
+}
+
+/*ENTIDADES*/
+.entidades {
+    margin-top: 120px;
+}
+
+.introducao-entidades {
+    width: 85%;
+    margin: auto;
+
+    text-align: center;
+
+    color: white;
+
+    margin-bottom: 60px;
+}
+
+.introducao-entidades p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/*CARROSSEL ENTIDADES*/
+.carrossel-entidades {
+    position: relative;
+
+    width: 100%;
+    height: 85vh;
+
+    overflow: hidden;
+}
+
+/*SLIDES*/
+.slide {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    transition: opacity 1s ease;
+}
+
+/*SLIDE ATIVO*/
+.slide.ativo {
+    opacity: 1;
+}
+
+/*IMAGEM SLIDE*/
+.slide img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
