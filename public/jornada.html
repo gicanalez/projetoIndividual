@@ -541,20 +541,24 @@
 
                 <div id="opcoes" class="flex-colunar padding-8">
                     <span>
-                        <input type="radio" id="primeiraOpcao" name="optionOrixa" class="radio" value="alternativaA" />
-                        <label for="primeiraOpcao" class="option" id="labelOpcaoUmOrixa"></label>
+                        <input type="radio" id="primeiraOpcaoOrixa" name="optionOrixa" class="radio"
+                            value="alternativaA" />
+                        <label for="primeiraOpcaoOrixa" class="option" id="labelOpcaoUmOrixa"></label>
                     </span>
                     <span>
-                        <input type="radio" id="segundaOpcao" name="optionOrixa" class="radio" value="alternativaB" />
-                        <label for="segundaOpcao" class="option" id="labelOpcaoDoisOrixa"></label>
+                        <input type="radio" id="segundaOpcaoOrixa" name="optionOrixa" class="radio"
+                            value="alternativaB" />
+                        <label for="segundaOpcaoOrixa" class="option" id="labelOpcaoDoisOrixa"></label>
                     </span>
                     <span>
-                        <input type="radio" id="terceiraOpcao" name="optionOrixa" class="radio" value="alternativaC" />
-                        <label for="terceiraOpcao" class="option" id="labelOpcaoTresOrixa"></label>
+                        <input type="radio" id="terceiraOpcaoOrixa" name="optionOrixa" class="radio"
+                            value="alternativaC" />
+                        <label for="terceiraOpcaoOrixa" class="option" id="labelOpcaoTresOrixa"></label>
                     </span>
                     <span>
-                        <input type="radio" id="quartaOpcao" name="optionOrixa" class="radio" value="alternativaD" />
-                        <label for="quartaOpcao" class="option" id="labelOpcaoQuatroOrixa"></label>
+                        <input type="radio" id="quartaOpcaoOrixa" name="optionOrixa" class="radio"
+                            value="alternativaD" />
+                        <label for="quartaOpcaoOrixa" class="option" id="labelOpcaoQuatroOrixa"></label>
                     </span>
                 </div>
 
@@ -670,12 +674,65 @@
                     </p>
                 </div>
             </div>
+            <!--QUIZ ENTIDADES-->
+            <div id="botaoinicio">
 
-            <div class="slide" onload="onloadEsconder()">
-                <div id="jogo"></div>
-                <img src="imgs/malandros.jpg">
-                <h2>Quiz Entidades</h2>
-                <button id="btIniciarQuiz" onclick="iniciarQuizEntidades()">Iniciar</button>
+                <button id="btnIniciarQuizEntidade" onclick="IniciarQuizEntidade()">INICIAR QUIZ</button>
+
+                <div id="pontuacaoEntidade" class="flex-colunar width-fit-content border-primary">
+                    <div id="pontuacaoFinalJogoEntidade" class="flex-colunar padding-8">
+                        <span id="pontuacaoFinalEntidade" class="width-fit-content">Pontuação Final:
+                            <span id="spanPontuacaoFinalEntidade"></span>
+                        </span>
+                        <span id="msgFinalEntidade" class="width-fit-content"></span>
+                    </div>
+                </div>
+
+                <div id="jogoEntidade" class="width-fit-content flex-colunar border-secondary">
+
+                    <div id="infoQuestaoEntidade" class="padding-8">
+                        <span>Questão atual: <span id="spanNumeroDaQuestaoAtualEntidade"></span> de <span
+                                id="qtdQuestoesEntidade"></span>
+                            questões.</span>
+                    </div>
+
+                    <div id="perguntaDaQuestaoAtualEntidade" class="padding-8">
+                        <span id="spanQuestaoExibidaEntidade" class="text-bold"></span>
+                    </div>
+
+                    <div id="infoAlternativasEntidade" class="padding-8">
+                        <span><em>Escolha uma opção dentre as abaixo:</em></span>
+                    </div>
+
+                    <div id="opcoes" class="flex-colunar padding-8">
+                        <span>
+                            <input type="radio" id="primeiraOpcaoEntidade" name="optionEntidade" class="radio"
+                                value="alternativaA" />
+                            <label for="primeiraOpcaoEntidade" class="option" id="labelOpcaoUmEntidade"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="segundaOpcaoEntidade" name="optionEntidade" class="radio"
+                                value="alternativaB" />
+                            <label for="segundaOpcaoEntidade" class="option" id="labelOpcaoDoisEntidade"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="terceiraOpcaoEntidade" name="optionEntidade" class="radio"
+                                value="alternativaC" />
+                            <label for="terceiraOpcaoEntidade" class="option" id="labelOpcaoTresEntidade"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="quartaOpcaoEntidade" name="optionEntidade" class="radio"
+                                value="alternativaD" />
+                            <label for="quartaOpcaoEntidade" class="option" id="labelOpcaoQuatroEntidade"></label>
+                        </span>
+                    </div>
+
+                    <div id="botoes" class="flex-colunar padding-8">
+                        <button onclick="submeterEntidade()" id="btnSubmeter">PRÓXIMA QUESTÃO</button>
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
@@ -822,6 +879,100 @@
             alternativaC: "Oxalá",
             alternativaD: "Ogum",
             alternativaCorreta: "alternativaC"
+        }
+
+    ]
+
+    const listaDeQuestoesEntidades = [
+
+        {
+            pergunta: "Qual linha espiritual representa alegria, pureza e leveza?",
+            alternativaA: "Exus",
+            alternativaB: "Caboclos",
+            alternativaC: "Erês",
+            alternativaD: "Boiadeiros",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "Qual linha está ligada à força da mata e à sabedoria?",
+            alternativaA: "Caboclos",
+            alternativaB: "Malandros",
+            alternativaC: "Marinheiros",
+            alternativaD: "Ciganos",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "Quais entidades são conhecidas pela humildade e aconselhamento?",
+            alternativaA: "Exus",
+            alternativaB: "Pretos-Velhos",
+            alternativaC: "Pombagiras",
+            alternativaD: "Baianos",
+            alternativaCorreta: "alternativaB"
+        },
+
+        {
+            pergunta: "Qual linha trabalha com limpeza espiritual e proteção?",
+            alternativaA: "Boiadeiros",
+            alternativaB: "Erês",
+            alternativaC: "Caboclos",
+            alternativaD: "Ciganos",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "Os Malandros representam principalmente:",
+            alternativaA: "Silêncio e recolhimento",
+            alternativaB: "Jogo de cintura e inteligência",
+            alternativaC: "Força da natureza",
+            alternativaD: "Pureza infantil",
+            alternativaCorreta: "alternativaB"
+        },
+
+        {
+            pergunta: "Qual linha espiritual está ligada à liberdade e prosperidade?",
+            alternativaA: "Marinheiros",
+            alternativaB: "Pretos-Velhos",
+            alternativaC: "Ciganos",
+            alternativaD: "Exus",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "Quais entidades ajudam no equilíbrio emocional e descarrego?",
+            alternativaA: "Caboclos",
+            alternativaB: "Marinheiros",
+            alternativaC: "Erês",
+            alternativaD: "Baianos",
+            alternativaCorreta: "alternativaB"
+        },
+
+        {
+            pergunta: "Qual linha representa simplicidade e acolhimento?",
+            alternativaA: "Baianos",
+            alternativaB: "Exus",
+            alternativaC: "Malandros",
+            alternativaD: "Pombagiras",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "Os Exus são conhecidos como:",
+            alternativaA: "Entidades da infância",
+            alternativaB: "Guardadores das matas",
+            alternativaC: "Guardiões dos caminhos",
+            alternativaD: "Guias das águas",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "As Pombagiras estão ligadas principalmente à:",
+            alternativaA: "Proteção feminina e autoestima",
+            alternativaB: "Caça e fartura",
+            alternativaC: "Sabedoria ancestral",
+            alternativaD: "Transformação da natureza",
+            alternativaCorreta: "alternativaA"
         }
 
     ]
@@ -1012,24 +1163,24 @@
         if (numeroDaQuestaoAtual <= quantidadeDeQuestoesOrixas - 1) {
             preencherHTMLcomQuestaoAtualOrixa(numeroDaQuestaoAtual)
         } else {
-            finalizarJogo()
+            finalizarJogoOrixa()
         }
     }
 
     function habilitarAlternativasOrixa(trueOrFalse) {
         let opcaoEscolhida = trueOrFalse ? false : true
 
-        primeiraOpcao.disabled = opcaoEscolhida
-        segundaOpcao.disabled = opcaoEscolhida
-        terceiraOpcao.disabled = opcaoEscolhida
-        quartaOpcao.disabled = opcaoEscolhida
+        document.getElementById("primeiraOpcaoOrixa").disabled = opcaoEscolhida
+        document.getElementById("segundaOpcaoOrixa").disabled = opcaoEscolhida
+        document.getElementById("terceiraOpcaoOrixa").disabled = opcaoEscolhida
+        document.getElementById("quartaOpcaoOrixa").disabled = opcaoEscolhida
     }
 
     function checarRespostaOrixa() {
         const questaoAtual = listaDeQuestoesOrixas[numeroDaQuestaoAtual] // questão atual 
         const respostaQuestaoAtual = questaoAtual.alternativaCorreta // qual é a resposta correta da questão atual
 
-        const alternativas = document.getElementsByName("option"); // recupera alternativas no html
+        const alternativas = document.getElementsByName("optionOrixa"); // recupera alternativas no html
 
         let alternativaCorreta = null // variável para armazenar a alternativa correta
 
@@ -1084,32 +1235,34 @@
         document.getElementById('spanPontuacaoFinalOrixa').innerHTML = pontuacaoFinal
     }
 
-    function btnIniciarQuizEntidade() {
-        document.getElementById('jogo').style.display = "flex"
+    // ENTIDADES
+
+    function IniciarQuizEntidade() {
+        document.getElementById('jogoEntidade').style.display = "flex"
         document.getElementById('btnIniciarQuizEntidade').style.display = "none"
 
         document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoesEntidade
 
-        preencherHTMLcomQuestaoAtual(0)
+        preencherHTMLcomQuestaoAtualEntidade(0)
 
     }
 
-    function preencherHTMLcomQuestaoAtualOrixa(index) {
-        habilitarAlternativasOrixa(true)
-        const questaoAtual = listaDeQuestoesOrixas[index]
+    function preencherHTMLcomQuestaoAtualEntidade(index) {
+        habilitarAlternativas(true)
+        const questaoAtual = listaDeQuestoesEntidades[index]
         numeroDaQuestaoAtual = index
         console.log("questaoAtual")
         console.log(questaoAtual)
-        document.getElementById("spanNumeroDaQuestaoAtualOrixa").innerHTML = Number(index) + 1
-        document.getElementById("spanQuestaoExibidaOrixa").innerHTML = questaoAtual.pergunta;
-        document.getElementById("labelOpcaoUmOrixa").innerHTML = questaoAtual.alternativaA;
-        document.getElementById("labelOpcaoDoisOrixa").innerHTML = questaoAtual.alternativaB;
-        document.getElementById("labelOpcaoTresOrixa").innerHTML = questaoAtual.alternativaC;
-        document.getElementById("labelOpcaoQuatroOrixa").innerHTML = questaoAtual.alternativaD;
+        document.getElementById("spanNumeroDaQuestaoAtualEntidade").innerHTML = Number(index) + 1
+        document.getElementById("spanQuestaoExibidaEntidade").innerHTML = questaoAtual.pergunta;
+        document.getElementById("labelOpcaoUmEntidade").innerHTML = questaoAtual.alternativaA;
+        document.getElementById("labelOpcaoDoisEntidade").innerHTML = questaoAtual.alternativaB;
+        document.getElementById("labelOpcaoTresEntidade").innerHTML = questaoAtual.alternativaC;
+        document.getElementById("labelOpcaoQuatroEntidade").innerHTML = questaoAtual.alternativaD;
     }
 
-    function submeterOrixa() {
-        const alternativas = document.getElementsByName("optionOrixa");
+    function submeterEntidade() {
+        const alternativas = document.getElementsByName("optionEntidade");
 
         let foiSelecionada = false
         for (let i = 0; i < alternativas.length; i++) {
@@ -1122,49 +1275,49 @@
         if (!foiSelecionada) {
             alert(`Não há alternativas escolhidas. Escolha uma opção.`)
         } else {
-            habilitarAlternativasOrixa(false)
-            checarRespostaOrixa()
+            habilitarAlternativasEntidade(false)
+            checarRespostaEntidade()
         }
 
-        if (numeroDaQuestaoAtual <= quantidadeDeQuestoesOrixas - 1) {
-            preencherHTMLcomQuestaoAtualOrixa(numeroDaQuestaoAtual)
+        if (numeroDaQuestaoAtual <= quantidadeDeQuestoesEntidade - 1) {
+            preencherHTMLcomQuestaoAtualEntidade(numeroDaQuestaoAtual)
         } else {
-            finalizarJogo()
+            finalizarJogoEntidade()
         }
     }
 
-    function habilitarAlternativasOrixa(trueOrFalse) {
+    function habilitarAlternativasEntidade(trueOrFalse) {
         let opcaoEscolhida = trueOrFalse ? false : true
 
-        primeiraOpcao.disabled = opcaoEscolhida
-        segundaOpcao.disabled = opcaoEscolhida
-        terceiraOpcao.disabled = opcaoEscolhida
-        quartaOpcao.disabled = opcaoEscolhida
+        document.getElementById("primeiraOpcaoEntidade").disabled = opcaoEscolhida
+        document.getElementById("segundaOpcaoEntidade").disabled = opcaoEscolhida
+        document.getElementById("terceiraOpcaoEntidade").disabled = opcaoEscolhida
+        document.getElementById("quartaOpcaoEntidade").disabled = opcaoEscolhida
     }
 
-    function checarRespostaOrixa() {
-        const questaoAtual = listaDeQuestoesOrixas[numeroDaQuestaoAtual] // questão atual 
+    function checarRespostaEntidade() {
+        const questaoAtual = listaDeQuestoesEntidades[numeroDaQuestaoAtual] // questão atual 
         const respostaQuestaoAtual = questaoAtual.alternativaCorreta // qual é a resposta correta da questão atual
 
-        const alternativas = document.getElementsByName("option"); // recupera alternativas no html
+        const alternativas = document.getElementsByName("optionEntidade"); // recupera alternativas no html
 
         let alternativaCorreta = null // variável para armazenar a alternativa correta
 
-        alternativas.forEach((optionOrixa) => {
-            if (optionOrixa.value === respostaQuestaoAtual) {
+        alternativas.forEach((optionEntidade) => {
+            if (optionEntidade.value === respostaQuestaoAtual) {
                 console.log("alternativaCorreta está no componente: " + alternativaCorreta)
-                alternativaCorreta = optionOrixa.labels[0].id
+                alternativaCorreta = optionEntidade.labels[0].id
             }
         })
 
         // verifica se resposta assinalada é correta
-        alternativas.forEach((optionOrixa) => {
-            if (optionOrixa.checked === true && optionOrixa.value === respostaQuestaoAtual) {
+        alternativas.forEach((optionEntidade) => {
+            if (optionEntidade.checked === true && optionEntidade.value === respostaQuestaoAtual) {
                 document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
                 pontuacaoFinal++
                 numeroDaQuestaoAtual++
-            } else if (optionOrixa.checked && optionOrixa.value !== respostaQuestaoAtual) {
-                const wrongLabelId = optionOrixa.labels[0].id
+            } else if (optionEntidade.checked && optionEntidade.value !== respostaQuestaoAtual) {
+                const wrongLabelId = optionEntidade.labels[0].id
 
                 document.getElementById(wrongLabelId).classList.add("text-danger-with-bg")
                 document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
@@ -1173,7 +1326,7 @@
         })
     }
 
-    function finalizarJogoOrixa() {
+    function finalizarJogoEntidade() {
         let textoParaMensagemFinal = null
         let classComCoresParaMensagemFinal = null
         const porcentagemFinalDeAcertos = pontuacaoFinal / quantidadeDeQuestoesOrixas
@@ -1193,12 +1346,12 @@
 
         textoParaMensagemFinal += "<br> Você acertou " + Math.round((porcentagemFinalDeAcertos) * 100) + "% das questões."
 
-        document.getElementById('pontuacaoOrixa').style.display = "flex";
-        document.getElementById('jogoOrixa').style.display = "none";
+        document.getElementById('pontuacaoEntidade').style.display = "flex";
+        document.getElementById('jogoEntidade').style.display = "none";
 
 
-        document.getElementById('msgFinalOrixa').innerHTML = textoParaMensagemFinal
-        document.getElementById('spanPontuacaoFinalOrixa').innerHTML = pontuacaoFinal
+        document.getElementById('msgFinalEntidade').innerHTML = textoParaMensagemFinal
+        document.getElementById('spanPontuacaoFinalEntidade').innerHTML = pontuacaoFinal
     }
 
 
