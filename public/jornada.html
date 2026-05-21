@@ -85,61 +85,61 @@
             Esse equilíbrio é construído através do autoconhecimento, da prática do bem e da reflexão.
         </p>
 
-        <!--QUIZ ENTIDADE-->
-         <div id="botaoinicio">
+        <!--QUIZ FUNDAMENTOS-->
+        <div id="botaoinicio">
 
-        <button id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
+            <button id="btnIniciarQuizFundamentos" onclick="btnIniciarQuizFundamentos()">INICIAR QUIZ</button>
 
-        <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
-            <div id="pontuacaoFinalJogo" class="flex-colunar padding-8">
-                <span id="pontuacaoFinal" class="width-fit-content">Pontuação Final:
-                    <span id="spanPontuacaoFinal">***</span>
-                </span>
-                <span id="msgFinal" class="width-fit-content">***</span>
+            <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
+                <div id="pontuacaoFinalJogo" class="flex-colunar padding-8">
+                    <span id="pontuacaoFinal" class="width-fit-content">Pontuação Final:
+                        <span id="spanPontuacaoFinal">***</span>
+                    </span>
+                    <span id="msgFinal" class="width-fit-content">***</span>
+                </div>
             </div>
+
+            <div id="jogo" class="width-fit-content flex-colunar border-secondary">
+
+                <div id="infoQuestao" class="padding-8">
+                    <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span id="qtdQuestoes"></span>
+                        questões.</span>
+                </div>
+
+                <div id="perguntaDaQuestaoAtual" class="padding-8">
+                    <span id="spanQuestaoExibida" class="text-bold"></span>
+                </div>
+
+                <div id="infoAlternativas" class="padding-8">
+                    <span><em>Escolha uma opção dentre as abaixo:</em></span>
+                </div>
+
+                <div id="opcoes" class="flex-colunar padding-8">
+                    <span>
+                        <input type="radio" id="primeiraOpcao" name="option" class="radio" value="alternativaA" />
+                        <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
+                    </span>
+                    <span>
+                        <input type="radio" id="segundaOpcao" name="option" class="radio" value="alternativaB" />
+                        <label for="segundaOpcao" class="option" id="labelOpcaoDois"></label>
+                    </span>
+                    <span>
+                        <input type="radio" id="terceiraOpcao" name="option" class="radio" value="alternativaC" />
+                        <label for="terceiraOpcao" class="option" id="labelOpcaoTres"></label>
+                    </span>
+                    <span>
+                        <input type="radio" id="quartaOpcao" name="option" class="radio" value="alternativaD" />
+                        <label for="quartaOpcao" class="option" id="labelOpcaoQuatro"></label>
+                    </span>
+                </div>
+
+                <div id="botoes" class="flex-colunar padding-8">
+                    <button onclick="submeter()" id="btnSubmeter">PRÓXIMA QUESTÃO</button>
+                </div>
+
+            </div>
+
         </div>
-
-        <div id="jogo" class="width-fit-content flex-colunar border-secondary">
-
-            <div id="infoQuestao" class="padding-8">
-                <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span id="qtdQuestoes"></span>
-                    questões.</span>
-            </div>
-
-            <div id="perguntaDaQuestaoAtual" class="padding-8">
-                <span id="spanQuestaoExibida" class="text-bold"></span>
-            </div>
-
-            <div id="infoAlternativas" class="padding-8">
-                <span><em>Escolha uma opção dentre as abaixo:</em></span>
-            </div>
-
-            <div id="opcoes" class="flex-colunar padding-8">
-                <span>
-                    <input type="radio" id="primeiraOpcao" name="option" class="radio" value="alternativaA" />
-                    <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
-                </span>
-                <span>
-                    <input type="radio" id="segundaOpcao" name="option" class="radio" value="alternativaB" />
-                    <label for="segundaOpcao" class="option" id="labelOpcaoDois"></label>
-                </span>
-                <span>
-                    <input type="radio" id="terceiraOpcao" name="option" class="radio" value="alternativaC" />
-                    <label for="terceiraOpcao" class="option" id="labelOpcaoTres"></label>
-                </span>
-                <span>
-                    <input type="radio" id="quartaOpcao" name="option" class="radio" value="alternativaD" />
-                    <label for="quartaOpcao" class="option" id="labelOpcaoQuatro"></label>
-                </span>
-            </div>
-
-            <div id="botoes" class="flex-colunar padding-8">
-                <button onclick="submeter()" id="btnSubmeter">PRÓXIMA QUESTÃO</button>
-            </div>
-
-        </div>
-
-    </div>
 
         <div class="orixas">
             <h1 class="tituloTopico">Orixás</h1>
@@ -509,6 +509,63 @@
             </div>
         </div>
 
+        <!--QUIZ ORIXÁS-->
+        <div id="botaoinicio">
+
+            <button id="btnIniciarQuizOrixa" onclick="iniciarQuizOrixa()">INICIAR QUIZ</button>
+
+            <div id="pontuacaoOrixa" class="flex-colunar width-fit-content border-primary">
+                <div id="pontuacaoFinalJogoOxira" class="flex-colunar padding-8">
+                    <span id="pontuacaoFinalOrixa" class="width-fit-content">Pontuação Final:
+                        <span id="spanPontuacaoFinalOrixa"></span>
+                    </span>
+                    <span id="msgFinalOrixa" class="width-fit-content"></span>
+                </div>
+            </div>
+
+            <div id="jogoOrixa" class="width-fit-content flex-colunar border-secondary">
+
+                <div id="infoQuestaoOrixa" class="padding-8">
+                    <span>Questão atual: <span id="spanNumeroDaQuestaoAtualOrixa"></span> de <span
+                            id="qtdQuestoesOrixa"></span>
+                        questões.</span>
+                </div>
+
+                <div id="perguntaDaQuestaoAtualOrixa" class="padding-8">
+                    <span id="spanQuestaoExibidaOrixa" class="text-bold"></span>
+                </div>
+
+                <div id="infoAlternativasOrixa" class="padding-8">
+                    <span><em>Escolha uma opção dentre as abaixo:</em></span>
+                </div>
+
+                <div id="opcoes" class="flex-colunar padding-8">
+                    <span>
+                        <input type="radio" id="primeiraOpcao" name="optionOrixa" class="radio" value="alternativaA" />
+                        <label for="primeiraOpcao" class="option" id="labelOpcaoUmOrixa"></label>
+                    </span>
+                    <span>
+                        <input type="radio" id="segundaOpcao" name="optionOrixa" class="radio" value="alternativaB" />
+                        <label for="segundaOpcao" class="option" id="labelOpcaoDoisOrixa"></label>
+                    </span>
+                    <span>
+                        <input type="radio" id="terceiraOpcao" name="optionOrixa" class="radio" value="alternativaC" />
+                        <label for="terceiraOpcao" class="option" id="labelOpcaoTresOrixa"></label>
+                    </span>
+                    <span>
+                        <input type="radio" id="quartaOpcao" name="optionOrixa" class="radio" value="alternativaD" />
+                        <label for="quartaOpcao" class="option" id="labelOpcaoQuatroOrixa"></label>
+                    </span>
+                </div>
+
+                <div id="botoes" class="flex-colunar padding-8">
+                    <button onclick="submeterOrixa()" id="btnSubmeter">PRÓXIMA QUESTÃO</button>
+                </div>
+
+            </div>
+
+        </div>
+
         <div class="entidades">
             <div class="introducao-entidades">
                 <h1 class="tituloTopico">Entidades</h1>
@@ -626,7 +683,7 @@
 
 </html>
 <script>
-    const listaDeQuestoes = [
+    const listaDeQuestoesFundamentos = [
 
         {
             pergunta: "Qual é um dos principais valores da Umbanda?",
@@ -675,28 +732,134 @@
 
     ]
 
+    const listaDeQuestoesOrixas = [
+
+        {
+            pergunta: "Qual Orixá representa a justiça e os trovões?",
+            alternativaA: "Ogum",
+            alternativaB: "Xangô",
+            alternativaC: "Oxóssi",
+            alternativaD: "Omulu",
+            alternativaCorreta: "alternativaB"
+        },
+
+        {
+            pergunta: "Qual Orixá está ligado às matas e ao conhecimento?",
+            alternativaA: "Oxóssi",
+            alternativaB: "Oxumaré",
+            alternativaC: "Obá",
+            alternativaD: "Egunitá",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "Qual Orixá simboliza os ventos, tempestades e transformações?",
+            alternativaA: "Iemanjá",
+            alternativaB: "Nanã",
+            alternativaC: "Iansã",
+            alternativaD: "Logunan",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "Qual Orixá está associado ao fogo purificador e à justiça divina?",
+            alternativaA: "Egunitá",
+            alternativaB: "Ogum",
+            alternativaC: "Oxalá",
+            alternativaD: "Oxum",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "Qual Orixá representa os ciclos da vida, renovação e movimento?",
+            alternativaA: "Obaluayê",
+            alternativaB: "Oxumaré",
+            alternativaC: "Xangô",
+            alternativaD: "Omulu",
+            alternativaCorreta: "alternativaB"
+        },
+
+        {
+            pergunta: "Qual Orixá é conhecido como o guerreiro que abre caminhos?",
+            alternativaA: "Ogum",
+            alternativaB: "Oxóssi",
+            alternativaC: "Xangô",
+            alternativaD: "Obá",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "Qual Orixá está ligado às águas doces, ao amor e à prosperidade?",
+            alternativaA: "Iansã",
+            alternativaB: "Nanã",
+            alternativaC: "Oxum",
+            alternativaD: "Iemanjá",
+            alternativaCorreta: "alternativaC"
+        },
+
+        {
+            pergunta: "Qual é a principal diferença entre Omulu e Obaluayê?",
+            alternativaA: "Omulu representa o mar e Obaluayê as matas",
+            alternativaB: "Omulu representa a fase mais velha e Obaluayê a mais jovem",
+            alternativaC: "Omulu é ligado ao fogo e Obaluayê ao vento",
+            alternativaD: "Não existe diferença entre eles",
+            alternativaCorreta: "alternativaB"
+        },
+
+        {
+            pergunta: "Qual Orixá representa a ancestralidade e a sabedoria mais antiga?",
+            alternativaA: "Nanã",
+            alternativaB: "Obá",
+            alternativaC: "Oxum",
+            alternativaD: "Iemanjá",
+            alternativaCorreta: "alternativaA"
+        },
+
+        {
+            pergunta: "Qual Orixá é considerado o pai maior, ligado à paz e à fé?",
+            alternativaA: "Xangô",
+            alternativaB: "Oxóssi",
+            alternativaC: "Oxalá",
+            alternativaD: "Ogum",
+            alternativaCorreta: "alternativaC"
+        }
+
+    ]
+
     let numeroDaQuestaoAtual = 0;
     let pontuacaoFinal = 0;
-    let quantidadeDeQuestoes = listaDeQuestoes.length;
+    let quantidadeDeQuestoesFundamentos = listaDeQuestoesFundamentos.length;
+    let quantidadeDeQuestoesOrixas = listaDeQuestoesOrixas.length;
+    let quantidadeDeQuestoesEntidade = listaDeQuestoesEntidades.length;
+
+
 
     function onloadEsconder() {
         document.getElementById('jogo').style.display = "none"
         document.getElementById('pontuacao').style.display = "none"
+
+        document.getElementById('jogoOrixa').style.display = "none"
+        document.getElementById('pontuacaoOrixa').style.display = "none"
+
+        document.getElementById('jogoEntidade').style.display = "none"
+        document.getElementById('pontuacaoEntidade').style.display = "none"
     }
 
-    function iniciarQuiz() {
+    // FUNDAMENTOS
+
+    function btnIniciarQuizFundamentos() {
         document.getElementById('jogo').style.display = "flex"
-        document.getElementById('btnIniciarQuiz').style.display = "none"
+        document.getElementById('btnIniciarQuizFundamentos').style.display = "none"
 
-        document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoes
+        document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoesFundamentos
 
-        preencherHTMLcomQuestaoAtual(0)
+        preencherHTMLcomQuestaoAtualFundamento(0)
 
     }
 
-    function preencherHTMLcomQuestaoAtual(index) {
+    function preencherHTMLcomQuestaoAtualFundamento(index) {
         habilitarAlternativas(true)
-        const questaoAtual = listaDeQuestoes[index]
+        const questaoAtual = listaDeQuestoesFundamentos[index]
         numeroDaQuestaoAtual = index
         console.log("questaoAtual")
         console.log(questaoAtual)
@@ -726,8 +889,8 @@
             checarResposta()
         }
 
-        if (numeroDaQuestaoAtual <= quantidadeDeQuestoes - 1) {
-            preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
+        if (numeroDaQuestaoAtual <= quantidadeDeQuestoesFundamentos - 1) {
+            preencherHTMLcomQuestaoAtualFundamento(numeroDaQuestaoAtual)
         } else {
             finalizarJogo()
         }
@@ -743,7 +906,7 @@
     }
 
     function checarResposta() {
-        const questaoAtual = listaDeQuestoes[numeroDaQuestaoAtual] // questão atual 
+        const questaoAtual = listaDeQuestoesFundamentos[numeroDaQuestaoAtual] // questão atual 
         const respostaQuestaoAtual = questaoAtual.alternativaCorreta // qual é a resposta correta da questão atual
 
         const alternativas = document.getElementsByName("option"); // recupera alternativas no html
@@ -776,7 +939,7 @@
     function finalizarJogo() {
         let textoParaMensagemFinal = null
         let classComCoresParaMensagemFinal = null
-        const porcentagemFinalDeAcertos = pontuacaoFinal / quantidadeDeQuestoes
+        const porcentagemFinalDeAcertos = pontuacaoFinal / quantidadeDeQuestoesFundamentos
 
         if (porcentagemFinalDeAcertos <= 0.3) {
             textoParaMensagemFinal = "Parece que você não estudou..."
@@ -801,4 +964,243 @@
         document.getElementById('msgFinal').classList.add(classComCoresParaMensagemFinal)
         document.getElementById('spanPontuacaoFinal').innerHTML = pontuacaoFinal
     }
+
+    // ORIXÁS
+
+    function iniciarQuizOrixa() {
+        document.getElementById('jogoOrixa').style.display = "flex"
+        document.getElementById('btnIniciarQuizOrixa').style.display = "none"
+
+        document.getElementById('qtdQuestoesOrixa').innerHTML = quantidadeDeQuestoesOrixas
+
+        preencherHTMLcomQuestaoAtualOrixa(0)
+
+    }
+
+    function preencherHTMLcomQuestaoAtualOrixa(index) {
+        habilitarAlternativasOrixa(true)
+        const questaoAtual = listaDeQuestoesOrixas[index]
+        numeroDaQuestaoAtual = index
+        console.log("questaoAtual")
+        console.log(questaoAtual)
+        document.getElementById("spanNumeroDaQuestaoAtualOrixa").innerHTML = Number(index) + 1
+        document.getElementById("spanQuestaoExibidaOrixa").innerHTML = questaoAtual.pergunta;
+        document.getElementById("labelOpcaoUmOrixa").innerHTML = questaoAtual.alternativaA;
+        document.getElementById("labelOpcaoDoisOrixa").innerHTML = questaoAtual.alternativaB;
+        document.getElementById("labelOpcaoTresOrixa").innerHTML = questaoAtual.alternativaC;
+        document.getElementById("labelOpcaoQuatroOrixa").innerHTML = questaoAtual.alternativaD;
+    }
+
+    function submeterOrixa() {
+        const alternativas = document.getElementsByName("optionOrixa");
+
+        let foiSelecionada = false
+        for (let i = 0; i < alternativas.length; i++) {
+            if (alternativas[i].checked) {
+                foiSelecionada = true
+                break
+            }
+        }
+
+        if (!foiSelecionada) {
+            alert(`Não há alternativas escolhidas. Escolha uma opção.`)
+        } else {
+            habilitarAlternativasOrixa(false)
+            checarRespostaOrixa()
+        }
+
+        if (numeroDaQuestaoAtual <= quantidadeDeQuestoesOrixas - 1) {
+            preencherHTMLcomQuestaoAtualOrixa(numeroDaQuestaoAtual)
+        } else {
+            finalizarJogo()
+        }
+    }
+
+    function habilitarAlternativasOrixa(trueOrFalse) {
+        let opcaoEscolhida = trueOrFalse ? false : true
+
+        primeiraOpcao.disabled = opcaoEscolhida
+        segundaOpcao.disabled = opcaoEscolhida
+        terceiraOpcao.disabled = opcaoEscolhida
+        quartaOpcao.disabled = opcaoEscolhida
+    }
+
+    function checarRespostaOrixa() {
+        const questaoAtual = listaDeQuestoesOrixas[numeroDaQuestaoAtual] // questão atual 
+        const respostaQuestaoAtual = questaoAtual.alternativaCorreta // qual é a resposta correta da questão atual
+
+        const alternativas = document.getElementsByName("option"); // recupera alternativas no html
+
+        let alternativaCorreta = null // variável para armazenar a alternativa correta
+
+        alternativas.forEach((optionOrixa) => {
+            if (optionOrixa.value === respostaQuestaoAtual) {
+                console.log("alternativaCorreta está no componente: " + alternativaCorreta)
+                alternativaCorreta = optionOrixa.labels[0].id
+            }
+        })
+
+        // verifica se resposta assinalada é correta
+        alternativas.forEach((optionOrixa) => {
+            if (optionOrixa.checked === true && optionOrixa.value === respostaQuestaoAtual) {
+                document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
+                pontuacaoFinal++
+                numeroDaQuestaoAtual++
+            } else if (optionOrixa.checked && optionOrixa.value !== respostaQuestaoAtual) {
+                const wrongLabelId = optionOrixa.labels[0].id
+
+                document.getElementById(wrongLabelId).classList.add("text-danger-with-bg")
+                document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
+                numeroDaQuestaoAtual++
+            }
+        })
+    }
+
+    function finalizarJogoOrixa() {
+        let textoParaMensagemFinal = null
+        let classComCoresParaMensagemFinal = null
+        const porcentagemFinalDeAcertos = pontuacaoFinal / quantidadeDeQuestoesOrixas
+
+        if (porcentagemFinalDeAcertos <= 0.3) {
+            textoParaMensagemFinal = "Parece que você não estudou..."
+            classComCoresParaMensagemFinal = "text-danger-with-bg"
+        }
+        else if (porcentagemFinalDeAcertos > 0.3 && porcentagemFinalDeAcertos < 0.9) {
+            textoParaMensagemFinal = "Pode melhorar na próxima, hein!"
+            classComCoresParaMensagemFinal = "text-warning-with-bg"
+        }
+        else if (porcentagemFinalDeAcertos >= 0.9) {
+            textoParaMensagemFinal = "Uau, parabéns!"
+            classComCoresParaMensagemFinal = "text-success-with-bg"
+        }
+
+        textoParaMensagemFinal += "<br> Você acertou " + Math.round((porcentagemFinalDeAcertos) * 100) + "% das questões."
+
+        document.getElementById('pontuacaoOrixa').style.display = "flex";
+        document.getElementById('jogoOrixa').style.display = "none";
+
+
+        document.getElementById('msgFinalOrixa').innerHTML = textoParaMensagemFinal
+        document.getElementById('spanPontuacaoFinalOrixa').innerHTML = pontuacaoFinal
+    }
+
+    function btnIniciarQuizEntidade() {
+        document.getElementById('jogo').style.display = "flex"
+        document.getElementById('btnIniciarQuizEntidade').style.display = "none"
+
+        document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoesEntidade
+
+        preencherHTMLcomQuestaoAtual(0)
+
+    }
+
+    function preencherHTMLcomQuestaoAtualOrixa(index) {
+        habilitarAlternativasOrixa(true)
+        const questaoAtual = listaDeQuestoesOrixas[index]
+        numeroDaQuestaoAtual = index
+        console.log("questaoAtual")
+        console.log(questaoAtual)
+        document.getElementById("spanNumeroDaQuestaoAtualOrixa").innerHTML = Number(index) + 1
+        document.getElementById("spanQuestaoExibidaOrixa").innerHTML = questaoAtual.pergunta;
+        document.getElementById("labelOpcaoUmOrixa").innerHTML = questaoAtual.alternativaA;
+        document.getElementById("labelOpcaoDoisOrixa").innerHTML = questaoAtual.alternativaB;
+        document.getElementById("labelOpcaoTresOrixa").innerHTML = questaoAtual.alternativaC;
+        document.getElementById("labelOpcaoQuatroOrixa").innerHTML = questaoAtual.alternativaD;
+    }
+
+    function submeterOrixa() {
+        const alternativas = document.getElementsByName("optionOrixa");
+
+        let foiSelecionada = false
+        for (let i = 0; i < alternativas.length; i++) {
+            if (alternativas[i].checked) {
+                foiSelecionada = true
+                break
+            }
+        }
+
+        if (!foiSelecionada) {
+            alert(`Não há alternativas escolhidas. Escolha uma opção.`)
+        } else {
+            habilitarAlternativasOrixa(false)
+            checarRespostaOrixa()
+        }
+
+        if (numeroDaQuestaoAtual <= quantidadeDeQuestoesOrixas - 1) {
+            preencherHTMLcomQuestaoAtualOrixa(numeroDaQuestaoAtual)
+        } else {
+            finalizarJogo()
+        }
+    }
+
+    function habilitarAlternativasOrixa(trueOrFalse) {
+        let opcaoEscolhida = trueOrFalse ? false : true
+
+        primeiraOpcao.disabled = opcaoEscolhida
+        segundaOpcao.disabled = opcaoEscolhida
+        terceiraOpcao.disabled = opcaoEscolhida
+        quartaOpcao.disabled = opcaoEscolhida
+    }
+
+    function checarRespostaOrixa() {
+        const questaoAtual = listaDeQuestoesOrixas[numeroDaQuestaoAtual] // questão atual 
+        const respostaQuestaoAtual = questaoAtual.alternativaCorreta // qual é a resposta correta da questão atual
+
+        const alternativas = document.getElementsByName("option"); // recupera alternativas no html
+
+        let alternativaCorreta = null // variável para armazenar a alternativa correta
+
+        alternativas.forEach((optionOrixa) => {
+            if (optionOrixa.value === respostaQuestaoAtual) {
+                console.log("alternativaCorreta está no componente: " + alternativaCorreta)
+                alternativaCorreta = optionOrixa.labels[0].id
+            }
+        })
+
+        // verifica se resposta assinalada é correta
+        alternativas.forEach((optionOrixa) => {
+            if (optionOrixa.checked === true && optionOrixa.value === respostaQuestaoAtual) {
+                document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
+                pontuacaoFinal++
+                numeroDaQuestaoAtual++
+            } else if (optionOrixa.checked && optionOrixa.value !== respostaQuestaoAtual) {
+                const wrongLabelId = optionOrixa.labels[0].id
+
+                document.getElementById(wrongLabelId).classList.add("text-danger-with-bg")
+                document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
+                numeroDaQuestaoAtual++
+            }
+        })
+    }
+
+    function finalizarJogoOrixa() {
+        let textoParaMensagemFinal = null
+        let classComCoresParaMensagemFinal = null
+        const porcentagemFinalDeAcertos = pontuacaoFinal / quantidadeDeQuestoesOrixas
+
+        if (porcentagemFinalDeAcertos <= 0.3) {
+            textoParaMensagemFinal = "Parece que você não estudou..."
+            classComCoresParaMensagemFinal = "text-danger-with-bg"
+        }
+        else if (porcentagemFinalDeAcertos > 0.3 && porcentagemFinalDeAcertos < 0.9) {
+            textoParaMensagemFinal = "Pode melhorar na próxima, hein!"
+            classComCoresParaMensagemFinal = "text-warning-with-bg"
+        }
+        else if (porcentagemFinalDeAcertos >= 0.9) {
+            textoParaMensagemFinal = "Uau, parabéns!"
+            classComCoresParaMensagemFinal = "text-success-with-bg"
+        }
+
+        textoParaMensagemFinal += "<br> Você acertou " + Math.round((porcentagemFinalDeAcertos) * 100) + "% das questões."
+
+        document.getElementById('pontuacaoOrixa').style.display = "flex";
+        document.getElementById('jogoOrixa').style.display = "none";
+
+
+        document.getElementById('msgFinalOrixa').innerHTML = textoParaMensagemFinal
+        document.getElementById('spanPontuacaoFinalOrixa').innerHTML = pontuacaoFinal
+    }
+
+
+
 </script>
