@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-   background-color: #091125;
+    background-color: #091125;
 }
 
 .header {
@@ -98,6 +98,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.conteudo-fundamento {
+    background-color: #13254f;
+    border-radius: 50PX;
+
+}
+
 .tituloTopico {
     font-size: 42px;
     margin-bottom: 30px;
@@ -108,13 +114,16 @@ body {
 .titulos {
     margin-top: 40px;
     font-size: 26px;
+    margin-left: 70px;
 
-    color: #d7b56d;
+    color: #e8e8e8;
 }
 
 .fundamento p {
     font-size: 18px;
     line-height: 1.8;
+    margin-left: 35px;
+    margin-right: 35px;
 
     color: #e8e8e8;
 }
@@ -203,7 +212,7 @@ body {
 }
 
 .card-front h2 {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 /*VERSO*/
@@ -222,20 +231,24 @@ body {
 }
 
 .card-back h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .card-back p {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.6;
 }
 
 .informacoes {
     margin-top: 20px;
 
-    color: #d7b56d;
+    color: white;
 
     line-height: 1.8;
+    font-size: 14;
+    background-color: #091125;
+    padding: 5px;
+    border-radius: 20px;
 }
 
 /*ENTIDADES*/

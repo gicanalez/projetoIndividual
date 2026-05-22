@@ -34,110 +34,115 @@
     </div>
 
     <div class="fundamento">
-        <h1 class="tituloTopico">Fundamentos da Umbanda</h1>
-        <h3 class="titulos">Introdução</h3>
-        <p>
-            Antes de compreender os detalhes, é importante conhecer os fundamentos.
-            A Umbanda é uma religião baseada na caridade, no respeito e na conexão entre o mundo espiritual e o mundo
-            material.
-        </p>
+        <div class="conteudo-fundamento">
+            <h1 class="tituloTopico">Fundamentos da Umbanda</h1>
+            <h3 class="titulos">Introdução</h3>
+            <p>
+                Antes de compreender os detalhes, é importante conhecer os fundamentos.
+                A Umbanda é uma religião baseada na caridade, no respeito e na conexão entre o mundo espiritual e o
+                mundo
+                material.
+            </p>
 
-        <h3 class="titulos">O que é Umbanda</h3>
-        <p>
-            A Umbanda é uma religião brasileira que une diferentes influências, como tradições africanas, indígenas,
-            espirituais e em algumas
-            vertentes podem também ter crenças ou fazer o uso de magias ritualisticas.
-            Seu principal objetivo é a prática do bem, ajudando as pessoas através da orientação espiritual.
-        </p>
+            <h3 class="titulos">O que é Umbanda</h3>
+            <p>
+                A Umbanda é uma religião brasileira que une diferentes influências, como tradições africanas, indígenas,
+                espirituais e em algumas
+                vertentes podem também ter crenças ou fazer o uso de magias ritualisticas.
+                Seu principal objetivo é a prática do bem, ajudando as pessoas através da orientação espiritual.
+            </p>
 
-        <h3 class="titulos">Princípios da Umbanda</h3>
-        <p>
-            A Umbanda se baseia em valores importantes, como: <br><br>
+            <h3 class="titulos">Princípios da Umbanda</h3>
+            <p>
+                A Umbanda se baseia em valores importantes, como: <br><br>
 
-            Caridade → ajudar o próximo sem esperar retorno <br>
-            Respeito → por todas as pessoas, crenças e caminhos <br>
-            Humildade → reconhecer que sempre há o que aprender <br>
-            Fé → acreditar na conexão espiritual <br>
-        </p>
+                Caridade → ajudar o próximo sem esperar retorno <br>
+                Respeito → por todas as pessoas, crenças e caminhos <br>
+                Humildade → reconhecer que sempre há o que aprender <br>
+                Fé → acreditar na conexão espiritual <br>
+            </p>
 
-        <h3 class="titulos">Mundo espiritual e material</h3>
-        <p>
-            Na Umbanda, acredita-se que existe uma ligação entre o mundo material (onde vivemos) e o espiritual.
-            As entidades espirituais atuam como guias, oferecendo orientação e auxílio, sempre respeitando o
-            livre-arbítrio de cada pessoa.
-        </p>
+            <h3 class="titulos">Mundo espiritual e material</h3>
+            <p>
+                Na Umbanda, acredita-se que existe uma ligação entre o mundo material (onde vivemos) e o espiritual.
+                As entidades espirituais atuam como guias, oferecendo orientação e auxílio, sempre respeitando o
+                livre-arbítrio de cada pessoa.
+            </p>
 
-        <h3 class="titulos">Papel das Entidades</h3>
-        <p>
-            As entidades não estão acima das pessoas, mas atuam como orientadores. Elas: <br>
-            ajudam <br>
-            aconselham <br>
-            trazem ensinamentos <br>
-            Sempre com o objetivo de promover evolução espiritual. <br>
-        </p>
+            <h3 class="titulos">Papel das Entidades</h3>
+            <p>
+                As entidades não estão acima das pessoas, mas atuam como orientadores. Elas: <br>
+                ajudam <br>
+                aconselham <br>
+                trazem ensinamentos <br>
+                Sempre com o objetivo de promover evolução espiritual. <br>
+            </p>
 
-        <h3 class="titulos">A Importância do Equilíbrio</h3>
-        <p>
-            A Umbanda valoriza o equilíbrio entre: <br><br>
-            corpo <br>
-            mente <br>
-            espírito <br>
-            Esse equilíbrio é construído através do autoconhecimento, da prática do bem e da reflexão.
-        </p>
+            <h3 class="titulos">A Importância do Equilíbrio</h3>
+            <p>
+                A Umbanda valoriza o equilíbrio entre: <br><br>
+                corpo <br>
+                mente <br>
+                espírito <br>
+                Esse equilíbrio é construído através do autoconhecimento, da prática do bem e da reflexão.
+            </p>
 
-        <!--QUIZ FUNDAMENTOS-->
-        <div id="botaoinicio">
+            <!--QUIZ FUNDAMENTOS-->
+            <div id="botaoinicio">
 
-            <button id="btnIniciarQuizFundamentos" onclick="btnIniciarQuizFundamentos()">INICIAR QUIZ</button>
+                <button id="btnIniciarQuizFundamentos" onclick="btnIniciarQuizFundamentos()">INICIAR QUIZ</button>
 
-            <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
-                <div id="pontuacaoFinalJogo" class="flex-colunar padding-8">
-                    <span id="pontuacaoFinal" class="width-fit-content">Pontuação Final:
-                        <span id="spanPontuacaoFinal">***</span>
-                    </span>
-                    <span id="msgFinal" class="width-fit-content">***</span>
+                <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
+                    <div id="pontuacaoFinalJogo" class="flex-colunar padding-8">
+                        <span id="pontuacaoFinal" class="width-fit-content">Pontuação Final:
+                            <span id="spanPontuacaoFinal">***</span>
+                        </span>
+                        <span id="msgFinal" class="width-fit-content">***</span>
+                    </div>
+                </div>
+
+                <div id="jogo" class="width-fit-content flex-colunar border-secondary">
+
+                    <div id="infoQuestao" class="padding-8">
+                        <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span
+                                id="qtdQuestoes"></span>
+                            questões.</span>
+                    </div>
+
+                    <div id="perguntaDaQuestaoAtual" class="padding-8">
+                        <span id="spanQuestaoExibida" class="text-bold"></span>
+                    </div>
+
+                    <div id="infoAlternativas" class="padding-8">
+                        <span><em>Escolha uma opção dentre as abaixo:</em></span>
+                    </div>
+
+                    <div id="opcoes" class="flex-colunar padding-8">
+                        <span>
+                            <input type="radio" id="primeiraOpcao" name="option" class="radio" value="alternativaA" />
+                            <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="segundaOpcao" name="option" class="radio" value="alternativaB" />
+                            <label for="segundaOpcao" class="option" id="labelOpcaoDois"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="terceiraOpcao" name="option" class="radio" value="alternativaC" />
+                            <label for="terceiraOpcao" class="option" id="labelOpcaoTres"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="quartaOpcao" name="option" class="radio" value="alternativaD" />
+                            <label for="quartaOpcao" class="option" id="labelOpcaoQuatro"></label>
+                        </span>
+                    </div>
+
+                    <div id="botoes" class="flex-colunar padding-8">
+                        <button onclick="submeter()" id="btnSubmeter">PRÓXIMA QUESTÃO</button>
+                    </div>
+
                 </div>
             </div>
 
-            <div id="jogo" class="width-fit-content flex-colunar border-secondary">
-
-                <div id="infoQuestao" class="padding-8">
-                    <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span id="qtdQuestoes"></span>
-                        questões.</span>
-                </div>
-
-                <div id="perguntaDaQuestaoAtual" class="padding-8">
-                    <span id="spanQuestaoExibida" class="text-bold"></span>
-                </div>
-
-                <div id="infoAlternativas" class="padding-8">
-                    <span><em>Escolha uma opção dentre as abaixo:</em></span>
-                </div>
-
-                <div id="opcoes" class="flex-colunar padding-8">
-                    <span>
-                        <input type="radio" id="primeiraOpcao" name="option" class="radio" value="alternativaA" />
-                        <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
-                    </span>
-                    <span>
-                        <input type="radio" id="segundaOpcao" name="option" class="radio" value="alternativaB" />
-                        <label for="segundaOpcao" class="option" id="labelOpcaoDois"></label>
-                    </span>
-                    <span>
-                        <input type="radio" id="terceiraOpcao" name="option" class="radio" value="alternativaC" />
-                        <label for="terceiraOpcao" class="option" id="labelOpcaoTres"></label>
-                    </span>
-                    <span>
-                        <input type="radio" id="quartaOpcao" name="option" class="radio" value="alternativaD" />
-                        <label for="quartaOpcao" class="option" id="labelOpcaoQuatro"></label>
-                    </span>
-                </div>
-
-                <div id="botoes" class="flex-colunar padding-8">
-                    <button onclick="submeter()" id="btnSubmeter">PRÓXIMA QUESTÃO</button>
-                </div>
-
-            </div>
 
         </div>
 
