@@ -306,3 +306,7 @@ body {
 
     object-fit: cover;
 }
+
+.slide h2{
+    color: #e8e8e8;
+}
