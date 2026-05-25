@@ -187,6 +187,102 @@
         });
     }
 
+    // GRÁFICO ORIXÁS
+
+    buscarDadosOrixas();
+
+    function buscarDadosOrixas() {
+
+        fetch("/dashboardOrixa/orixas")
+            .then(function (resposta) {
+
+                resposta.json().then(function (dados) {
+                    console.log(dados);
+
+                    let labels = [];
+                    let resultados = [];
+
+                    for (let i = 0; i < dados.length; i++) {
+                        labels.push(dados[i].dataQuiz);
+                        resultados.push(dados[i].resultado);
+                    }
+                    criarGraficoOrixas(labels, resultados)
+                });
+
+            })
+            .catch(function (erro) {
+                console.log("Erro ao buscar dados:", erro);
+            });
+    }
+
+    function criarGraficoOrixas(labels, resultados) {
+
+        const graficoOrixa = document.getElementById('graficoOrixa');
+
+        new Chart(graficoOrixa, {
+            type: 'line',
+
+            data: {
+                labels: labels,
+
+                datasets: [{
+                    label: 'Resultado',
+                    data: resultados,
+                    borderColor: '#c77dff',
+                    borderDash: [5, 5],
+                    borderWidth: 3
+                }]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                scales: {
+                    x: {
+                        ticks: {
+                            color: "#ffffff"
+                        },
+
+                        title: {
+                            display: true,
+                            text: 'Data',
+                            color: "#fff"
+                        }
+                    },
+
+                    y: {
+                        beginAtZero: true,
+
+                        ticks: {
+                            color: "#ffffff"
+                        },
+
+                        title: {
+                            display: true,
+                            text: 'Resultado',
+                            color: '#ffffff'
+                        }
+                    }
+                },
+
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Desempenho em Orixás',
+                        color: '#ffffff'
+                    },
+
+                    legend: {
+                        labels: {
+                            color: '#ffffff'
+                        }
+                    }
+                }
+            }
+        });
+    }
+
     /*
 
     const graficoOrixa = document.getElementById('graficoOrixa');
