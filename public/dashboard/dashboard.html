@@ -193,7 +193,7 @@
 
     function buscarDadosOrixas() {
 
-        fetch("/dashboardOrixa/orixas")
+        fetch("/dashboard/orixas")
             .then(function (resposta) {
 
                 resposta.json().then(function (dados) {
@@ -283,139 +283,99 @@
         });
     }
 
-    /*
+    // GRÁFICO ENTIDADES
 
-    const graficoOrixa = document.getElementById('graficoOrixa');
+    buscarDadosEntidade();
 
-    new Chart(graficoOrixa, {
-        type: 'line',
-        data: {
-            labels: ['20/04', '27/04', '04/05', '11/05', '18/05'],
-            datasets: [
-                {
-                    label: 'Resultado:',
-                    data: [230, 830, 350, 610, 1290, 670],
-                    borderColor: '#c77dff',
-                    borderDash: [5, 5],
-                    borderWidth: 3
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                x: {
-                    ticks: {
-                        font: {
-                            size: 13
-                        },
-                        color: "#ffffff"
-                    },
-                    title: {
-                        font: {
-                            size: 18
-                        },
-                        text: 'Data',
-                        display: true,
-                        color: "#fff"
+    function buscarDadosEntidade() {
+
+        fetch("/dashboard/entidades")
+            .then(function (resposta) {
+
+                resposta.json().then(function (dados) {
+                    console.log(dados);
+
+                    let labels = [];
+                    let resultados = [];
+
+                    for (let i = 0; i < dados.length; i++) {
+                        labels.push(dados[i].dataQuiz);
+                        resultados.push(dados[i].resultado);
                     }
-                },
-                y: {
-                    title: {
-                        display: true,
-                        text: 'Resultado',
-                        color: '#ffffff'
-                    },
-                    beginAtZero: true,
-                    ticks: {
-                        font: {
-                            size: 14
-                        },
-                        color: "#ffffff"
-                    }
-                }
-            },
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Desempenho em Orixás',
-                    color: '#ffffff',
-                    font: { size: 16 }
-                },
-                legend: {
-                    labels: {
-                        color: '#ffffff'
-                    }
-                }
-            }
-        }
-    });
+                    criarGraficoEntidades(labels, resultados)
+                });
 
-    const graficoEntidade = document.getElementById('graficoEntidade');
+            })
+            .catch(function (erro) {
+                console.log("Erro ao buscar dados:", erro);
+            });
+    }
 
-    new Chart(graficoEntidade, {
-        type: 'line',
-        data: {
-            labels: ['20/04', '27/04', '04/05', '11/05', '18/05'],
-            datasets: [
-                {
-                    label: 'Resultado:',
-                    data: [230, 830, 350, 610, 1290, 670],
+    function criarGraficoEntidades(labels, resultados) {
+
+        const graficoEntidade = document.getElementById('graficoEntidade');
+
+        new Chart(graficoEntidade, {
+            type: 'line',
+
+            data: {
+                labels: labels,
+
+                datasets: [{
+                    label: 'Resultado',
+                    data: resultados,
                     borderColor: '#FF0000',
                     borderDash: [5, 5],
                     borderWidth: 3
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                x: {
-                    ticks: {
-                        font: {
-                            size: 13
-                        },
-                        color: "#ffffff"
-                    },
-                    title: {
-                        font: {
-                            size: 18
-                        },
-                        text: 'Data',
-                        display: true,
-                        color: "#fff"
-                    }
-                },
-                y: {
-                    title: {
-                        display: true,
-                        text: 'Resultado',
-                        color: '#ffffff'
-                    },
-                    beginAtZero: true,
-                    ticks: {
-                        font: {
-                            size: 14
-                        },
-                        color: "#ffffff"
-                    }
-                }
+                }]
             },
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Desempenho em Entidades',
-                    color: '#ffffff',
-                    font: { size: 16 }
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                scales: {
+                    x: {
+                        ticks: {
+                            color: "#ffffff"
+                        },
+
+                        title: {
+                            display: true,
+                            text: 'Data',
+                            color: "#fff"
+                        }
+                    },
+
+                    y: {
+                        beginAtZero: true,
+
+                        ticks: {
+                            color: "#ffffff"
+                        },
+
+                        title: {
+                            display: true,
+                            text: 'Resultado',
+                            color: '#ffffff'
+                        }
+                    }
                 },
-                legend: {
-                    labels: {
+
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Desempenho em Entidades',
                         color: '#ffffff'
+                    },
+
+                    legend: {
+                        labels: {
+                            color: '#ffffff'
+                        }
                     }
                 }
             }
-        }
-    });*/
+        });
+    }
 </script>

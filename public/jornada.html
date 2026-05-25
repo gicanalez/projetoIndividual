@@ -578,145 +578,62 @@
                 </p>
             </div>
 
+        </div>
+        <!--QUIZ ENTIDADES-->
+        <div id="botaoinicio">
 
-            <div class="slide">
-                <img src="./assets/fundoEres.jpeg">
-                <h2>Erês</h2>
-                <p>
-                    Representam a pureza, a alegria e a leveza espiritual.
-                </p>
+            <button id="btnIniciarQuizEntidade" onclick="IniciarQuizEntidade()">INICIAR QUIZ</button>
+
+            <div id="pontuacaoEntidade" class="flex-colunar width-fit-content border-primary">
+                <div id="pontuacaoFinalJogoEntidade" class="flex-colunar padding-8">
+                    <span id="pontuacaoFinalEntidade" class="width-fit-content">Pontuação Final:
+                        <span id="spanPontuacaoFinalEntidade"></span>
+                    </span>
+                    <span id="msgFinalEntidade" class="width-fit-content"></span>
+                </div>
             </div>
 
-            <div class="slide">
-                <img src="./assets/fundoCaboclos.jpeg">
-                <h2>Caboclos</h2>
-                <p>
-                    Linha ligada à força da mata, coragem e sabedoria.
-                </p>
-            </div>
+            <div id="jogoEntidade" class="width-fit-content flex-colunar border-secondary">
 
-            <div class="slide">
-                <img src="./assets/fundoPretosVelhos.jpeg">
-                <h2>Pretos-Velhos</h2>
-                <p>
-                    Símbolos de humildade, acolhimento e aconselhamento.
-                </p>
-            </div>
-
-            <div class="slide">
-                <img src="./assets/fundoBoiadeiros.jpeg">
-                <h2>Boiadeiros</h2>
-                <p>
-                    Trabalham com limpeza espiritual e proteção.
-                </p>
-            </div>
-
-            <div class="slide">
-                <img src="imgs/malandros.jpg">
-                <h2>Malandros</h2>
-                <p>
-                    Representam jogo de cintura, inteligência e proteção.
-                </p>
-            </div>
-
-
-
-            <div class="slide">
-                <img src="imgs/eres.jpg">
-                <h2>Ciganos</h2>
-                <p>
-                    Linha ligada à liberdade, prosperidade, magia e alegria de viver.
-                </p>
-            </div>
-
-            <div class="slide">
-                <img src="imgs/caboclos.jpg">
-                <h2>Marinheiros</h2>
-                <p>
-                    Trazem equilíbrio emocional, descarrego e força diante das tempestades da vida.
-                </p>
-            </div>
-
-            <div class="slide">
-                <img src="imgs/pretosvelhos.jpg">
-                <h2>Baianos</h2>
-                <p>
-                    Representam simplicidade, acolhimento e muita força espiritual.
-                </p>
-            </div>
-
-            <div class="slide">
-                <img src="imgs/boiadeiros.jpg">
-                <h2>Exus</h2>
-                <p>
-                    Guardiões dos caminhos, atuam na proteção e na quebra de energias negativas.
-                </p>
-            </div>
-
-            <div class="slide">
-                <img src="imgs/malandros.jpg">
-                <h2>Pombagiras</h2>
-                <p>
-                    Linha ligada à força feminina, proteção, autoestima e liberdade espiritual.
-                </p>
-            </div>
-            <!--QUIZ ENTIDADES-->
-            <div id="botaoinicio">
-
-                <button id="btnIniciarQuizEntidade" onclick="IniciarQuizEntidade()">INICIAR QUIZ</button>
-
-                <div id="pontuacaoEntidade" class="flex-colunar width-fit-content border-primary">
-                    <div id="pontuacaoFinalJogoEntidade" class="flex-colunar padding-8">
-                        <span id="pontuacaoFinalEntidade" class="width-fit-content">Pontuação Final:
-                            <span id="spanPontuacaoFinalEntidade"></span>
-                        </span>
-                        <span id="msgFinalEntidade" class="width-fit-content"></span>
-                    </div>
+                <div id="infoQuestaoEntidade" class="padding-8">
+                    <span>Questão atual: <span id="spanNumeroDaQuestaoAtualEntidade"></span> de <span
+                            id="qtdQuestoesEntidade"></span>
+                        questões.</span>
                 </div>
 
-                <div id="jogoEntidade" class="width-fit-content flex-colunar border-secondary">
+                <div id="perguntaDaQuestaoAtualEntidade" class="padding-8">
+                    <span id="spanQuestaoExibidaEntidade" class="text-bold"></span>
+                </div>
 
-                    <div id="infoQuestaoEntidade" class="padding-8">
-                        <span>Questão atual: <span id="spanNumeroDaQuestaoAtualEntidade"></span> de <span
-                                id="qtdQuestoesEntidade"></span>
-                            questões.</span>
-                    </div>
+                <div id="infoAlternativasEntidade" class="padding-8">
+                    <span><em>Escolha uma opção dentre as abaixo:</em></span>
+                </div>
 
-                    <div id="perguntaDaQuestaoAtualEntidade" class="padding-8">
-                        <span id="spanQuestaoExibidaEntidade" class="text-bold"></span>
-                    </div>
+                <div id="opcoes" class="flex-colunar padding-8">
+                    <span>
+                        <input type="radio" id="primeiraOpcaoEntidade" name="optionEntidade" class="radio"
+                            value="alternativaA" />
+                        <label for="primeiraOpcaoEntidade" class="option" id="labelOpcaoUmEntidade"></label>
+                    </span>
+                    <span>
+                        <input type="radio" id="segundaOpcaoEntidade" name="optionEntidade" class="radio"
+                            value="alternativaB" />
+                        <label for="segundaOpcaoEntidade" class="option" id="labelOpcaoDoisEntidade"></label>
+                    </span>
+                    <span>
+                        <input type="radio" id="terceiraOpcaoEntidade" name="optionEntidade" class="radio"
+                            value="alternativaC" />
+                        <label for="terceiraOpcaoEntidade" class="option" id="labelOpcaoTresEntidade"></label>
+                    </span>
+                    <span>
+                        <input type="radio" id="quartaOpcaoEntidade" name="optionEntidade" class="radio"
+                            value="alternativaD" />
+                        <label for="quartaOpcaoEntidade" class="option" id="labelOpcaoQuatroEntidade"></label>
+                    </span>
+                </div>
 
-                    <div id="infoAlternativasEntidade" class="padding-8">
-                        <span><em>Escolha uma opção dentre as abaixo:</em></span>
-                    </div>
-
-                    <div id="opcoes" class="flex-colunar padding-8">
-                        <span>
-                            <input type="radio" id="primeiraOpcaoEntidade" name="optionEntidade" class="radio"
-                                value="alternativaA" />
-                            <label for="primeiraOpcaoEntidade" class="option" id="labelOpcaoUmEntidade"></label>
-                        </span>
-                        <span>
-                            <input type="radio" id="segundaOpcaoEntidade" name="optionEntidade" class="radio"
-                                value="alternativaB" />
-                            <label for="segundaOpcaoEntidade" class="option" id="labelOpcaoDoisEntidade"></label>
-                        </span>
-                        <span>
-                            <input type="radio" id="terceiraOpcaoEntidade" name="optionEntidade" class="radio"
-                                value="alternativaC" />
-                            <label for="terceiraOpcaoEntidade" class="option" id="labelOpcaoTresEntidade"></label>
-                        </span>
-                        <span>
-                            <input type="radio" id="quartaOpcaoEntidade" name="optionEntidade" class="radio"
-                                value="alternativaD" />
-                            <label for="quartaOpcaoEntidade" class="option" id="labelOpcaoQuatroEntidade"></label>
-                        </span>
-                    </div>
-
-                    <div id="botoes" class="flex-colunar padding-8">
-                        <button onclick="submeterEntidade()" id="btnSubmeter">PRÓXIMA QUESTÃO</button>
-                    </div>
-
+                <div id="botoes" class="flex-colunar padding-8">
+                    <button onclick="submeterEntidade()" id="btnSubmeter">PRÓXIMA QUESTÃO</button>
                 </div>
 
             </div>
@@ -1268,6 +1185,7 @@
     // ENTIDADES
 
     function IniciarQuizEntidade() {
+        console.log('entrei')
         document.getElementById('jogoEntidade').style.display = "flex"
         document.getElementById('btnIniciarQuizEntidade').style.display = "none"
 
@@ -1319,10 +1237,6 @@
     function habilitarAlternativasEntidade(trueOrFalse) {
         let opcaoEscolhida = trueOrFalse ? false : true
 
-        document.getElementById("primeiraOpcaoEntidade").disabled = opcaoEscolhida
-        document.getElementById("segundaOpcaoEntidade").disabled = opcaoEscolhida
-        document.getElementById("terceiraOpcaoEntidade").disabled = opcaoEscolhida
-        document.getElementById("quartaOpcaoEntidade").disabled = opcaoEscolhida
     }
 
     function checarRespostaEntidade() {
