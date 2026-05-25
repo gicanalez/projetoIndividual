@@ -1119,6 +1119,28 @@
         document.getElementById('msgFinal').innerHTML = textoParaMensagemFinal
         document.getElementById('msgFinal').classList.add(classComCoresParaMensagemFinal)
         document.getElementById('spanPontuacaoFinal').innerHTML = pontuacaoFinal
+
+        var idUsuario = sessionStorage.ID_USUARIO
+        console.log(idUsuario)
+        console.log(pontuacaoFinal)
+
+        fetch("/tentativas/cadastrar", {
+            method: 'POST',
+            headers: {
+                'Content-Type': "application/json"
+            },
+            body: JSON.stringify({
+                fkUsuarioServer: idUsuario,
+                fkQuizServer: 1,
+                resultadoServer: pontuacaoFinal
+            })
+        })
+            .then(function (resposta) {
+                console.log('Resultado Salvo');
+            })
+            .catch(function (erro) {
+                console.log(erro);
+            })
     }
 
     // ORIXÁS
