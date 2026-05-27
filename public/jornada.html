@@ -86,9 +86,9 @@
             </p>
 
             <!--QUIZ FUNDAMENTOS-->
-            <div id="botaoinicio">
+            <div id="botaoinicio" class="botaoInicio">
 
-                <button id="btnIniciarQuizFundamentos" onclick="btnIniciarQuizFundamentos()">INICIAR QUIZ</button>
+                <button class="botaoQuiz" id="btnIniciarQuizFundamentos" onclick="btnIniciarQuizFundamentos()">INICIAR QUIZ</button>
 
                 <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
                     <div id="pontuacaoFinalJogo" class="flex-colunar padding-8">
@@ -107,7 +107,7 @@
                             questões.</span>
                     </div>
 
-                    <div id="perguntaDaQuestaoAtual" class="padding-8">
+                    <div id="perguntaDaQuestaoAtual" class="padding">
                         <span id="spanQuestaoExibida" class="text-bold"></span>
                     </div>
 
@@ -115,7 +115,7 @@
                         <span><em>Escolha uma opção dentre as abaixo:</em></span>
                     </div>
 
-                    <div id="opcoes" class="flex-colunar padding-8">
+                    <div id="opcoes" class="flex-colunar">
                         <span>
                             <input type="radio" id="primeiraOpcao" name="option" class="radio" value="alternativaA" />
                             <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
@@ -496,7 +496,7 @@
         </div>
 
         <!--QUIZ ORIXÁS-->
-        <div id="botaoinicio">
+        <div id="botaoinicio" class="botaoInicio">
 
             <button id="btnIniciarQuizOrixa" onclick="iniciarQuizOrixa()">INICIAR QUIZ</button>
 
@@ -549,7 +549,7 @@
                 </div>
 
                 <div id="botoes" class="flex-colunar padding-8">
-                    <button onclick="submeterOrixa()" id="btnSubmeter">PRÓXIMA QUESTÃO</button>
+                    <button class="submeterOrixa" onclick="submeterOrixa()" id="btnSubmeter">PRÓXIMA QUESTÃO</button>
                 </div>
 
             </div>
@@ -578,7 +578,7 @@
 
         </div>
         <!--QUIZ ENTIDADES-->
-        <div id="botaoinicio">
+        <div id="botaoinicio" class="botaoInicio">
 
             <button id="btnIniciarQuizEntidade" onclick="IniciarQuizEntidade()">INICIAR QUIZ</button>
 
@@ -631,7 +631,7 @@
                 </div>
 
                 <div id="botoes" class="flex-colunar padding-8">
-                    <button onclick="submeterEntidade()" id="btnSubmeter">PRÓXIMA QUESTÃO</button>
+                    <button class="submeterEntidade" onclick="submeterEntidade()" id="btnSubmeter">PRÓXIMA QUESTÃO</button>
                 </div>
 
             </div>
@@ -1037,6 +1037,7 @@
             .catch(function (erro) {
                 console.log(erro);
             })
+            pontuacaoFinal = 0
     }
 
     // ORIXÁS
@@ -1178,6 +1179,7 @@
             .catch(function (erro) {
                 console.log(erro);
             })
+            pontuacaoFinal = 0 
     }
 
     // ENTIDADES
@@ -1316,6 +1318,7 @@
             .catch(function (erro) {
                 console.log(erro);
             })
+            pontuacaoFinal = 0
     }
 
 

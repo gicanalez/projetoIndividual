@@ -39,9 +39,19 @@ function buscarEntidades() {
     return database.executar(instrucaoSql);
 }
 
+function buscarTotalQuizzes() {
+    var instrucaoSql = `
+        SELECT COUNT(*) AS totalQuiz
+        FROM tentativa;z;
+    `;
+    console.log("executando instruçao: ", instrucaoSql)
+    return database.executar(instrucaoSql);
+}
+
 
 module.exports = {
     buscarFundamentos,
     buscarOrixas,
-    buscarEntidades
+    buscarEntidades,
+    buscarTotalQuizzes
 }
