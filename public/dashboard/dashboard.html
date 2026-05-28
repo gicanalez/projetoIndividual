@@ -46,21 +46,18 @@
         <div class="container-kpi">
 
             <div class="kpi">
-                <!--<div class="img"><img src="imgs/aprenda.svg" alt=""></div>-->
                 <p>Quizzes feitos</p>
-                <span>12</span>
+                <span id="kpi_quizzesFeitos"></span>
             </div>
 
             <div class="kpi">
-                <!--<div class="img"><img src="imgs/calendar.png" alt=""></div>-->
                 <p>Última tentativa</p>
-                <span>2 dias atrás</span>
+                <span id="kpi_ultimaTentativa"></span>
             </div>
 
             <div class="kpi">
-                <!--<div class="img"><img src="imgs/trofeu.png" alt=""></div>-->
                 <p>Melhor resultado</p>
-                <span>9/10</span>
+                <span id="kpi_melhorResultado"></span>
             </div>
         </div>
 
@@ -85,11 +82,65 @@
 </html>
 <script>
 
-    buscarDadosFundamentos();
+    let idUsuario = sessionStorage.getItem("ID_USUARIO")
+
+    function buscarTotalQuizzes() {
+
+        fetch(`/dashboard/totalQuizzes/${idUsuario}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': "application/json"
+            }
+        })
+            .then(function (resposta) {
+
+                resposta.json().then(function (dados) {
+                    console.log(dados);
+
+                    kpi_quizzesFeitos.innerHTML = dados[0].totalQuiz;
+                })
+            })
+    }
+
+    function buscarUltimaTentativa() {
+
+        fetch(`/dashboard/ultimaTentativa/${idUsuario}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': "application/json"
+            }
+        })
+            .then(function (resposta) {
+
+                resposta.json().then(function (dados) {
+                    console.log(dados);
+
+                    kpi_ultimaTentativa.innerHTML = dados[0].dataQuiz;
+                })
+            })
+    }
+
+    function buscarMelhorResultado() {
+
+        fetch(`/dashboard/melhorResultado/${idUsuario}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': "application/json"
+            }
+        })
+            .then(function (resposta) {
+
+                resposta.json().then(function (dados) {
+                    console.log(dados);
+
+                    kpi_melhorResultado.innerHTML = dados[0].melhor_resultado;
+                })
+            })
+    }
 
     function buscarDadosFundamentos() {
 
-        fetch("/dashboard/fundamentos")
+        fetch(`/dashboard/fundamentos/${idUsuario}`)
             .then(function (resposta) {
 
                 resposta.json().then(function (dados) {
@@ -181,11 +232,10 @@
 
     // GRÁFICO ORIXÁS
 
-    buscarDadosOrixas();
 
     function buscarDadosOrixas() {
 
-        fetch("/dashboard/orixas")
+        fetch(`/dashboard/orixas/${idUsuario}`)
             .then(function (resposta) {
 
                 resposta.json().then(function (dados) {
@@ -277,11 +327,10 @@
 
     // GRÁFICO ENTIDADES
 
-    buscarDadosEntidade();
 
     function buscarDadosEntidade() {
 
-        fetch("/dashboard/entidades")
+        fetch(`/dashboard/entidades/${idUsuario}`)
             .then(function (resposta) {
 
                 resposta.json().then(function (dados) {
@@ -370,4 +419,12 @@
             }
         });
     }
+
+    buscarDadosFundamentos();
+    buscarDadosOrixas();
+    buscarDadosEntidade();
+    buscarTotalQuizzes();
+    buscarUltimaTentativa();
+    buscarMelhorResultado();
+
 </script>
