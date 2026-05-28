@@ -17,17 +17,13 @@ CHECK (tipo IN ('fundamentos', 'orixas', 'entidades'))
 );
 
 CREATE TABLE tentativa(
+idTentativa INT PRIMARY KEY AUTO_INCREMENT,
 fkUsuario INT,
-CONSTRAINT fkUsuarioTentativa
-FOREIGN KEY (fkUsuario) REFERENCES usuario(idUsuario),
-fkQuiz INT, 
-CONSTRAINT fkQuizTentativa
-FOREIGN KEY (fkQuiz) REFERENCES quiz(idQuiz),
+fkQuiz INT,
 resultado INT,
 dataQuiz DATE,
-PRIMARY KEY (fkUsuario, fkQuiz)
+CONSTRAINT fkUsuarioTentativa
+FOREIGN KEY (fkUsuario) REFERENCES usuario(idUsuario),
+CONSTRAINT fkQuizTentativa
+FOREIGN KEY (fkQuiz) REFERENCES quiz(idQuiz)
 );
-
-DESC usuario;
-DESC quiz;
-DESC tentativa;
