@@ -212,12 +212,12 @@ body {
     align-items: center;
     justify-content: center;
 
-    gap: 40px;
+    gap: 120px;
     margin-bottom: 20px;
 }
 
 .texto-lado {
-    width: 450px;
+    width: 470px;
     background: rgba(255, 255, 255, 0.05);
     padding: 25px;
     border-radius: 40px;

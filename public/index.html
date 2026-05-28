@@ -36,7 +36,7 @@
         </div>
 
         <div class="botaoBannerHome">
-            <a href="./jornada.html"><button onclick="comecarJornarda()">Começar a jornada</button></a>
+            <a href="./login.html"><button onclick="comecarJornarda()">Começar a jornada</button></a>
         </div>
     </div>
 
@@ -125,11 +125,7 @@
         <h1>Sobre Mim</h1>
         <div class="conteudo-sobreMim">
             <div class="carrossel">
-                <button onclick="voltar()"> < </button>
-
                 <img id="imagem" src="./assets/imgs/img3.jpeg" alt="">
-
-                <button onclick="avancar()">></button>
             </div>
 
             <div class="texto-lado">
@@ -171,35 +167,3 @@
 </body>
 
 </html>
-<script>
-    let listaImagens = [
-        "./assets/imgs/img1.jpeg",
-        "./assets/imgs/img2.jpeg",
-        "./assets/imgs/img3.jpeg"
-
-    ];
-
-    let indiceAtual = 0;
-
-    function avancar() {
-
-        indiceAtual++;
-
-        if (indiceAtual >= listaImagens.length) {
-            indiceAtual = 0;
-        }
-
-        imagem.src = listaImagens[indiceAtual];
-    }
-
-    function voltar() {
-
-        indiceAtual--;
-
-        if (indiceAtual < 0) {
-            indiceAtual = listaImagens.length - 1;
-        }
-
-        imagem.src = listaImagens[indiceAtual];
-    }
-</script>

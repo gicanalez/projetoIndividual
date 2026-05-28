@@ -101,7 +101,7 @@ body {
 .conteudo-fundamento {
     background-color: #13254f;
     border-radius: 50PX;
-
+    padding: 10px;
 }
 
 .tituloTopico {
@@ -252,9 +252,6 @@ body {
 }
 
 /*ENTIDADES*/
-.entidades {
-    margin-top: 120px;
-}
 
 .introducao-entidades {
     width: 85%;
@@ -272,6 +269,48 @@ body {
     line-height: 1.8;
 }
 
+.entidades {
+    width: 1000px;
+    padding: 60px 10%;
+    background-color: #020f3a;
+    color: white;
+}
+
+.container-entidades {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card-entidade {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.card-entidade img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.texto-entidade h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.texto-entidade p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f1f1f1;
+}
+
 
 
 /* QUIZ */
@@ -280,7 +319,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .botaoQuiz,

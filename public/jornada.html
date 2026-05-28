@@ -88,7 +88,8 @@
             <!--QUIZ FUNDAMENTOS-->
             <div id="botaoinicio" class="botaoInicio">
 
-                <button class="botaoQuiz" id="btnIniciarQuizFundamentos" onclick="btnIniciarQuizFundamentos()">INICIAR QUIZ</button>
+                <button class="botaoQuiz" id="btnIniciarQuizFundamentos" onclick="btnIniciarQuizFundamentos()">INICIAR
+                    QUIZ</button>
 
                 <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
                     <div id="pontuacaoFinalJogo" class="flex-colunar padding-8">
@@ -576,67 +577,208 @@
                 </p>
             </div>
 
-        </div>
-        <!--QUIZ ENTIDADES-->
-        <div id="botaoinicio" class="botaoInicio">
+            <!-- CABOCLOS -->
+            <div class="card-entidade">
+                <img src="./assets/fundoCaboclos.jpeg" alt="Caboclos">
 
-            <button id="btnIniciarQuizEntidade" onclick="IniciarQuizEntidade()">INICIAR QUIZ</button>
-
-            <div id="pontuacaoEntidade" class="flex-colunar width-fit-content border-primary">
-                <div id="pontuacaoFinalJogoEntidade" class="flex-colunar padding-8">
-                    <span id="pontuacaoFinalEntidade" class="width-fit-content">Pontuação Final:
-                        <span id="spanPontuacaoFinalEntidade"></span>
-                    </span>
-                    <span id="msgFinalEntidade" class="width-fit-content"></span>
+                <div class="texto-entidade">
+                    <h2>Caboclos</h2>
+                    <p>
+                        Representam a força da natureza, a coragem e a sabedoria.
+                        Trabalham com firmeza espiritual, aconselhamento e conexão
+                        com as matas.
+                    </p>
                 </div>
             </div>
 
-            <div id="jogoEntidade" class="width-fit-content flex-colunar border-secondary">
+            <!-- PRETOS VELHOS -->
+            <div class="card-entidade">
+                <img src="./assets/fundoPretosVelhos.jpeg" alt="Pretos Velhos">
 
-                <div id="infoQuestaoEntidade" class="padding-8">
-                    <span>Questão atual: <span id="spanNumeroDaQuestaoAtualEntidade"></span> de <span
-                            id="qtdQuestoesEntidade"></span>
-                        questões.</span>
+                <div class="texto-entidade">
+                    <h2>Pretos-Velhos</h2>
+                    <p>
+                        Entidades ligadas à humildade, paciência e acolhimento.
+                        Trazem conselhos, conforto espiritual e ensinamentos
+                        através da sabedoria ancestral.
+                    </p>
                 </div>
+            </div>
 
-                <div id="perguntaDaQuestaoAtualEntidade" class="padding-8">
-                    <span id="spanQuestaoExibidaEntidade" class="text-bold"></span>
+            <!-- ERÊS -->
+            <div class="card-entidade">
+                <img src="./assets/fundoEres.jpeg" alt="Erês">
+
+                <div class="texto-entidade">
+                    <h2>Erês</h2>
+                    <p>
+                        Representam alegria, pureza e leveza espiritual.
+                        Trabalham trazendo felicidade, esperança e equilíbrio
+                        emocional.
+                    </p>
                 </div>
+            </div>
 
-                <div id="infoAlternativasEntidade" class="padding-8">
-                    <span><em>Escolha uma opção dentre as abaixo:</em></span>
+            <!-- BOIADEIROS -->
+            <div class="card-entidade">
+                <img src="./assets/fundoBoiadeiros.jpeg" alt="Boiadeiros">
+
+                <div class="texto-entidade">
+                    <h2>Boiadeiros</h2>
+                    <p>
+                        Conhecidos pela força e proteção espiritual.
+                        Trabalham com limpeza energética, descarrego
+                        e abertura de caminhos.
+                    </p>
                 </div>
+            </div>
 
-                <div id="opcoes" class="flex-colunar padding-8">
-                    <span>
-                        <input type="radio" id="primeiraOpcaoEntidade" name="optionEntidade" class="radio"
-                            value="alternativaA" />
-                        <label for="primeiraOpcaoEntidade" class="option" id="labelOpcaoUmEntidade"></label>
-                    </span>
-                    <span>
-                        <input type="radio" id="segundaOpcaoEntidade" name="optionEntidade" class="radio"
-                            value="alternativaB" />
-                        <label for="segundaOpcaoEntidade" class="option" id="labelOpcaoDoisEntidade"></label>
-                    </span>
-                    <span>
-                        <input type="radio" id="terceiraOpcaoEntidade" name="optionEntidade" class="radio"
-                            value="alternativaC" />
-                        <label for="terceiraOpcaoEntidade" class="option" id="labelOpcaoTresEntidade"></label>
-                    </span>
-                    <span>
-                        <input type="radio" id="quartaOpcaoEntidade" name="optionEntidade" class="radio"
-                            value="alternativaD" />
-                        <label for="quartaOpcaoEntidade" class="option" id="labelOpcaoQuatroEntidade"></label>
-                    </span>
+            <!-- MALANDROS -->
+            <div class="card-entidade">
+                <img src="./assets/fundoMalandros.png" alt="Malandros">
+
+                <div class="texto-entidade">
+                    <h2>Malandros</h2>
+                    <p>
+                        Representam jogo de cintura, inteligência e estratégia.
+                        Ajudam com equilíbrio emocional e orientação para
+                        enfrentar desafios da vida.
+                    </p>
                 </div>
+            </div>
 
-                <div id="botoes" class="flex-colunar padding-8">
-                    <button class="submeterEntidade" onclick="submeterEntidade()" id="btnSubmeter">PRÓXIMA QUESTÃO</button>
+            <!-- CIGANOS -->
+            <div class="card-entidade">
+                <img src="./assets/fundoCiganos.jpeg" alt="Ciganos">
+
+                <div class="texto-entidade">
+                    <h2>Ciganos</h2>
+                    <p>
+                        Ligados à liberdade, prosperidade e energia positiva.
+                        Trabalham autoestima, caminhos financeiros e motivação.
+                    </p>
                 </div>
+            </div>
 
+            <!-- MARINHEIROS -->
+            <div class="card-entidade">
+                <img src="./assets/fundoMarinheiros.jpeg" alt="Marinheiros">
+
+                <div class="texto-entidade">
+                    <h2>Marinheiros</h2>
+                    <p>
+                        Entidades associadas às águas e ao equilíbrio emocional.
+                        Auxiliam em descarregos espirituais e no controle
+                        das emoções.
+                    </p>
+                </div>
+            </div>
+
+            <!-- BAIANOS -->
+            <div class="card-entidade">
+                <img src="./assets/fundoBaianos.jpeg" alt="Baianos">
+
+                <div class="texto-entidade">
+                    <h2>Baianos</h2>
+                    <p>
+                        Representam simplicidade, alegria e acolhimento.
+                        Trabalham trazendo força, motivação e ensinamentos
+                        com muito bom humor.
+                    </p>
+                </div>
+            </div>
+
+            <!-- EXUS -->
+            <div class="card-entidade">
+                <img src="./assets/fundoExu.jpeg" alt="Exus">
+
+                <div class="texto-entidade">
+                    <h2>Exus</h2>
+                    <p>
+                        Guardiões dos caminhos e da proteção espiritual.
+                        Trabalham na quebra de demandas, proteção e equilíbrio
+                        energético.
+                    </p>
+                </div>
+            </div>
+
+            <!-- POMBAGIRAS -->
+            <div class="card-entidade">
+                <img src="./assets/fundoPombagira.jpeg" alt="Pombagiras">
+
+                <div class="texto-entidade">
+                    <h2>Pombagiras</h2>
+                    <p>
+                        Ligadas à força feminina, autoestima e independência.
+                        Trabalham proteção, amor-próprio e segurança emocional.
+                    </p>
+                </div>
             </div>
 
         </div>
+
+    </div>
+
+    <!--QUIZ ENTIDADES-->
+    <div id="botaoinicio" class="botaoInicio">
+
+        <button id="btnIniciarQuizEntidade" onclick="IniciarQuizEntidade()">INICIAR QUIZ</button>
+
+        <div id="pontuacaoEntidade" class="flex-colunar width-fit-content border-primary">
+            <div id="pontuacaoFinalJogoEntidade" class="flex-colunar padding-8">
+                <span id="pontuacaoFinalEntidade" class="width-fit-content">Pontuação Final:
+                    <span id="spanPontuacaoFinalEntidade"></span>
+                </span>
+                <span id="msgFinalEntidade" class="width-fit-content"></span>
+            </div>
+        </div>
+
+        <div id="jogoEntidade" class="width-fit-content flex-colunar border-secondary">
+
+            <div id="infoQuestaoEntidade" class="padding-8">
+                <span>Questão atual: <span id="spanNumeroDaQuestaoAtualEntidade"></span> de <span
+                        id="qtdQuestoesEntidade"></span>
+                    questões.</span>
+            </div>
+
+            <div id="perguntaDaQuestaoAtualEntidade" class="padding-8">
+                <span id="spanQuestaoExibidaEntidade" class="text-bold"></span>
+            </div>
+
+            <div id="infoAlternativasEntidade" class="padding-8">
+                <span><em>Escolha uma opção dentre as abaixo:</em></span>
+            </div>
+
+            <div id="opcoes" class="flex-colunar padding-8">
+                <span>
+                    <input type="radio" id="primeiraOpcaoEntidade" name="optionEntidade" class="radio"
+                        value="alternativaA" />
+                    <label for="primeiraOpcaoEntidade" class="option" id="labelOpcaoUmEntidade"></label>
+                </span>
+                <span>
+                    <input type="radio" id="segundaOpcaoEntidade" name="optionEntidade" class="radio"
+                        value="alternativaB" />
+                    <label for="segundaOpcaoEntidade" class="option" id="labelOpcaoDoisEntidade"></label>
+                </span>
+                <span>
+                    <input type="radio" id="terceiraOpcaoEntidade" name="optionEntidade" class="radio"
+                        value="alternativaC" />
+                    <label for="terceiraOpcaoEntidade" class="option" id="labelOpcaoTresEntidade"></label>
+                </span>
+                <span>
+                    <input type="radio" id="quartaOpcaoEntidade" name="optionEntidade" class="radio"
+                        value="alternativaD" />
+                    <label for="quartaOpcaoEntidade" class="option" id="labelOpcaoQuatroEntidade"></label>
+                </span>
+            </div>
+
+            <div id="botoes" class="flex-colunar padding-8">
+                <button class="submeterEntidade" onclick="submeterEntidade()" id="btnSubmeter">PRÓXIMA QUESTÃO</button>
+            </div>
+
+        </div>
+
+    </div>
 </body>
 
 </html>
@@ -1037,7 +1179,7 @@
             .catch(function (erro) {
                 console.log(erro);
             })
-            pontuacaoFinal = 0
+        pontuacaoFinal = 0
     }
 
     // ORIXÁS
@@ -1094,10 +1236,6 @@
     function habilitarAlternativasOrixa(trueOrFalse) {
         let opcaoEscolhida = trueOrFalse ? false : true
 
-        document.getElementById("primeiraOpcaoOrixa").disabled = opcaoEscolhida
-        document.getElementById("segundaOpcaoOrixa").disabled = opcaoEscolhida
-        document.getElementById("terceiraOpcaoOrixa").disabled = opcaoEscolhida
-        document.getElementById("quartaOpcaoOrixa").disabled = opcaoEscolhida
     }
 
     function checarRespostaOrixa() {
@@ -1179,7 +1317,7 @@
             .catch(function (erro) {
                 console.log(erro);
             })
-            pontuacaoFinal = 0 
+        pontuacaoFinal = 0
     }
 
     // ENTIDADES
@@ -1318,7 +1456,7 @@
             .catch(function (erro) {
                 console.log(erro);
             })
-            pontuacaoFinal = 0
+        pontuacaoFinal = 0
     }
 
 
